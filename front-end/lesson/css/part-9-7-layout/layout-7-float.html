@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <title>Layout 7 Float</title>
+</head>
+<body>
+    <style>
+        header {
+            padding: 10px;
+            background-color: orange;
+            font-size: 1.5em;
+        }
+
+        footer {
+            padding: 5px;
+            background-color: rgb(67, 67, 67);
+        }
+
+        aside, article {
+            min-height: 500px;
+        }
+
+        aside {
+            background-color: rgb(209, 209, 209);
+            width: 20%;
+        }
+
+        article {
+            background-color: rgb(110, 110, 110);
+            width: 60%;
+        }
+    </style>
+    <div id="wrapper">
+        <header class="text-white text-center">UNITOP.VN</header>
+        <div id="wp-content" class="clearfix">
+            <aside class="float-left">Siderbar Left</aside>
+            <article class="float-left">Content</article>
+            <aside class="float-left">Siderbar Right</aside>
+        </div>
+        <footer class="text-white text-center">Học lập trình web đi làm</footer>
+    </div>
+</body>
+</html>

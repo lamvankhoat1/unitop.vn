@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout 2 cột với flex</title>
+</head>
+<body>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        h3 {
+            margin: 0;
+            text-align: center;
+        }
+
+        /* ==== WRAPPER ==== */
+        #wrapper {
+            max-width: 960px;;
+            margin: 0 auto;
+        }
+        /* ==== HEADER, FOOTER ==== */
+        header, footer {
+            padding: 10px 0;
+            background-color: rgb(138, 138, 255);
+            color: white;
+        }
+
+        /* ==== SECTION ==== */
+        section {
+            display: flex;
+            flex-wrap: nowrap
+        }
+
+        article {
+            flex: 7 1 600px;
+            min-height: 500px;
+            background-color: white;
+        }
+        aside {
+            flex: 3 1 360px;
+            min-height: 500px;
+            background-color: rgb(174, 174, 174);
+        }
+    </style>
+    <div id="wrapper">
+        <header><h3>Layout web 2 cột</h3></header>
+        <section>
+            <article>
+                Content
+            </article>
+            <aside>
+                Sidebar
+            </aside>
+        </section>
+        <footer><h3>unitop.vn</h3></footer>
+    </div>
+</body>
+</html>

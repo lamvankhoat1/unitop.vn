@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Shortcut</title>
+</head>
+
+<body>
+    <style>
+        .container {
+            display: flex;
+            background-color: blanchedalmond;
+            /* flex-wrap: wrap; */
+        }
+
+        .flex-item {
+            background-color: orange;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        .item1 {
+            /* flex: 200px */
+            /* flex: 0 0 300px; */
+            flex: auto;
+        }
+
+        .item2 {
+            /* flex: 200px */
+            /* flex: 0 0 300px; */
+            flex: auto;
+        }
+    </style>
+    <div id="wrapper">
+        <div class="container">
+            <div class="flex-item item1">Item 1</div>
+            <div class="flex-item item2">Item 2</div>
+        </div>
+    </div>
+</body>
+
+</html>

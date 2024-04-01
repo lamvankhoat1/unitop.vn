@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout 4 Float</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+</head>
+<body>
+    <style>
+        #wrapper {
+            /* max-width: 960px; */
+            margin: 0 auto;
+        }
+
+        header {
+            padding: 10px;
+            background-color: orange;
+            font-size: 1.5em;
+        }
+
+        article {
+            min-height: 500px;
+            background-color: rgb(183, 183, 183);
+            width: 80%;
+        }
+
+        aside {
+            min-height: 500px;
+            width: 20%;
+            background-color: rgb(230, 230, 230);
+        }
+
+        footer {
+            padding: 5px;
+            background-color: rgb(67, 67, 67);
+        }
+    </style>
+    <div id="wrapper">
+        <header class="text-center text-white">
+            <div class="container">UNITOP.VN</div>
+        </header>
+        <div id="wp-content" class="clearfix container">
+            <article class="text-white float-left">Content</article>
+            <aside class="float-left">Sidebar</aside>
+        </div>
+        <footer class="text-center text-white">
+            <div class="container">Học lập trình web đi làm</div>
+        </footer>
+    </div>
+</body>
+</html>

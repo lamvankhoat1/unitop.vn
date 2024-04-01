@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display None</title>
+</head>
+
+<body>
+    <style>
+        #main-menu li:hover ul.sub-menu {
+            display: block;
+        }
+        ul.sub-menu {
+            display: none;
+        }
+    </style>
+    <ul id="main-menu">
+        <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+        <li><a href="#">Accusamus beatae eaque dignissimos totam.</a></li>
+        <li><a href="#">Tenetur alias temporibus iusto iste.</a>
+            <ul class="sub-menu">
+                <li><a href="#">Sub - Lorem ipsum dolor sit.</a></li>
+                <li><a href="#">Sub - Cupiditate soluta mollitia aliquid?</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Sunt cumque corporis nulla officia?</a></li>
+    </ul>
+</body>
+
+</html>

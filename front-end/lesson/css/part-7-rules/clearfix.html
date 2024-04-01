@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clearfix</title>
+</head>
+<body>
+    <style>
+        #wrapper {
+            margin: 0 auto;
+            width: 960px;
+            min-height: 500px;
+        }
+
+        [class^="box-"] {
+            float: left;
+            min-height: 400px;
+        }
+
+        .box-1 {
+            width: 600px;
+        }
+        .box-2 {
+            width: 360px;
+        }
+
+        /* clearfix */
+        .clearfix {
+            clear: both;
+            display: block;
+        }
+
+        .clearfix::after {
+            clear: both;
+            display: block;
+            content: ".";
+            height: 0;
+            visibility: hidden;
+            line-height: 0;
+        }
+    </style>
+    <div id="wrapper">
+        <div class="box clearfix">
+            <div class="box-1">Box 1</div>
+            <div class="box-2">Box 2</div>
+            <!-- C1 -->
+            <!-- <div class="clearfix"></div> -->
+        </div>
+    </div>
+</body>
+</html>

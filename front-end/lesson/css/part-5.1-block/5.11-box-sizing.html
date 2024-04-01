@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box sizing</title>
+</head>
+<body>
+    <style>
+        #wrapper {
+            width: 960px;
+            margin: 0 auto;
+        }
+
+        [class^="box"]{
+            border: 2px solid red;
+            padding: 15px;
+            width: 400px;
+            height: 200px;
+            float: left;
+            margin: 10px;
+            overflow: hidden;
+        }
+
+        .box2 {
+            box-sizing: border-box;
+        }
+    </style>
+    <div id="wrapper">
+        <div class="box1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem pariatur maiores soluta facilis? Magni eos, recusandae voluptas aspernatur modi nemo assumenda, at earum minima, cupiditate neque fugiat vero pariatur iusto quo voluptate reprehenderit dolores! Ullam tempore officia cupiditate, eaque vitae quisquam veniam aliquid, totam perspiciatis id temporibus doloremque officiis distinctio ea, nisi similique ad. Illo porro hic adipisci inventore ratione necessitatibus laborum. Pariatur obcaecati in molestiae dicta autem asperiores unde, molestias optio reiciendis hic quae id accusamus sed, repellendus alias!</div>
+        <div class="box2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem pariatur maiores soluta facilis? Magni eos, recusandae voluptas aspernatur modi nemo assumenda, at earum minima, cupiditate neque fugiat vero pariatur iusto quo voluptate reprehenderit dolores! Ullam tempore officia cupiditate, eaque vitae quisquam veniam aliquid, totam perspiciatis id temporibus doloremque officiis distinctio ea, nisi similique ad. Illo porro hic adipisci inventore ratione necessitatibus laborum. Pariatur obcaecati in molestiae dicta autem asperiores unde, molestias optio reiciendis hic quae id accusamus sed, repellendus alias!</div>
+    </div>
+</body>
+</html>

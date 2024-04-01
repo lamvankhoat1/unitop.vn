@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector loại trừ</title>
+</head>
+<body>
+    <style>
+        p:not(.active) {
+            font-weight: bold;
+        }
+
+        #wrapper :not(p){
+            background-color: aquamarine;
+        }
+    </style>
+    <div id="wrapper">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et a dolorem, sunt adipisci dolores beatae.</p>
+        <p>Optio alias porro corrupti consectetur minima, officia distinctio harum, illo in, et architecto repellat enim.</p>
+        <p>Soluta, odit veritatis nostrum unde impedit, praesentium libero fugit dolores id odio qui totam aliquid.</p>
+        <p class="active">Illo architecto quibusdam id a! Architecto in quisquam doloremque minus doloribus quo hic voluptate impedit?</p>
+        <p>Vitae expedita quam cupiditate dolor assumenda, alias saepe quas. Ab cupiditate tenetur optio beatae iusto?</p>
+
+        <a href="">Lorem ipsum dolor sit.</a><br>
+        <a href="">Consequuntur repudiandae omnis obcaecati.</a><br>
+        <a href="">Sequi sunt alias tempore?</a><br>
+        <a href="">Illum odit doloremque cum?</a><br>
+
+    </div>
+</body>
+</html>

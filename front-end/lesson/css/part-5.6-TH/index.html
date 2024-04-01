@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        * {
+            box-sizing: border-box;
+            /* border: 1px solid red; */
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .text-center {
+            text-align: center;
+            display: block;
+        }
+        #wrapper {
+            width: 960px;
+            margin: 0 auto;
+        }
+        ul.list-product {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            flex-basis: 33.33%;
+            padding: 15px;
+        }
+
+        
+        div.product-item {
+            border: 1px solid #e8e8e8;
+            position: relative;
+        }
+        ul li:hover div.product-item {
+            border: 1px solid #ff9494;
+        }
+
+        .price-item {
+            color: rgb(255, 183, 0);
+            font-weight: bold;
+        }
+
+        .description-item {
+            margin: 5px 0;
+        }
+
+        .buy-now {
+            color: rgb(255, 122, 122);
+            text-decoration: none;
+            margin-bottom: 15px;
+        }
+
+        .buy-now:hover {
+            color: rgb(255, 82, 82);
+        }
+
+        img.sale {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+
+    </style>
+    <div id="wrapper">
+        <ul class="list-product">
+            <li>
+                <div class="product-item">
+                    <a href="#" class="thumb-item"><img src="images/product1.jpg" alt="product1"></a>
+                    <span class="price-item text-center">499.000đ</span>
+                    <p class="description-item text-center">Lorem ipsum dolor sit amet.</p>
+                    <a href="#" class="buy-now text-center">Mua ngay</a>
+                    <img src="images/sale.png" alt="sale" class="sale">
+                </div>
+            </li>
+            <li>
+                <div class="product-item">
+                    <a href="#" class="thumb-item"><img src="images/product2.jpg" alt="product1"></a>
+                    <span class="price-item text-center">499.000đ</span>
+                    <p class="description-item text-center">Lorem ipsum dolor sit amet.</p>
+                    <a href="#" class="buy-now text-center">Mua ngay</a>
+                    <img src="images/sale.png" alt="sale" class="sale">
+
+                </div>
+            </li>
+            <li>
+                <div class="product-item">
+                    <a href="#" class="thumb-item"><img src="images/product3.jpg" alt="product1"></a>
+                    <span class="price-item text-center">499.000đ</span>
+                    <p class="description-item text-center">Lorem ipsum dolor sit amet.</p>
+                    <a href="#" class="buy-now text-center">Mua ngay</a>
+                </div>
+            </li>
+            <li>
+                <div class="product-item">
+                    <a href="#" class="thumb-item"><img src="images/product4.jpg" alt="product1"></a>
+                    <span class="price-item text-center">499.000đ</span>
+                    <p class="description-item text-center">Lorem ipsum dolor sit amet.</p>
+                    <a href="#" class="buy-now text-center">Mua ngay</a>
+                </div>
+            </li>
+            <li>
+                <div class="product-item">
+                    <a href="#" class="thumb-item"><img src="images/product1.jpg" alt="product1"></a>
+                    <span class="price-item text-center">499.000đ</span>
+                    <p class="description-item text-center">Lorem ipsum dolor sit amet.</p>
+                    <a href="#" class="buy-now text-center">Mua ngay</a>
+                </div>
+            </li>
+            <li>
+                <div class="product-item">
+                    <a href="#" class="thumb-item"><img src="images/product2.jpg" alt="product1"></a>
+                    <span class="price-item text-center">499.000đ</span>
+                    <p class="description-item text-center">Lorem ipsum dolor sit amet.</p>
+                    <a href="#" class="buy-now text-center">Mua ngay</a>
+                    <img src="images/sale.png" alt="sale" class="sale">
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

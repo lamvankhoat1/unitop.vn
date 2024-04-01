@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biến toàn cầu và biến cục bộ</title>
+</head>
+<body>
+    <script>
+        /* 
+          x là biến toàn cục
+          y là biến cục bộ
+        */
+        var x = 10;
+        function test(){
+            x = 20;
+            var y = 30;
+        }
+
+        document.write(x);
+        document.write(y);
+    </script>
+</body>
+</html>

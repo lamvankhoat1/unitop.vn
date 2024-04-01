@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector Con Cháu</title>
+</head>
+<body>
+    <style>
+        ul#main-menu a {
+            color: red;
+        } 
+
+        /* trong #main-menu có thể có nhiều sub-menu nên dùng class */
+        ul#main-menu .sub-menu a {
+            color: blue;
+        }
+    </style>
+    <ul id="main-menu">
+        <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Liên hệ</a></li>
+            <li><a href="#">Sản phẩm</a>
+                <ul class="sub-menu">
+                    <li><a href="#">Máy tính</a></li>
+                    <li><a href="#">Điện thoại</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Giới thiệu</a></li>
+        </ul>
+    </ul>
+</body>
+</html>

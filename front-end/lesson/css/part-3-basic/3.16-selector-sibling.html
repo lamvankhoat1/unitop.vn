@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector Anh Chị/EM</title>
+</head>
+<body>
+    <style>
+        /* firt child */
+        ul li:first-child {
+            color: red;
+        }
+
+        /* last child */
+        ul li:last-child {color: blue;}
+        /* nth child  */
+        ul li:nth-child(3){
+            /* color: aqua; */
+        }
+        /* even */
+        ul li:nth-child(even){
+            /* color: blueviolet; */
+        }
+        /* odd */
+        ul li:nth-child(odd){
+            /* font-weight: bold; */
+        }
+        /* 3n */
+        ul li:nth-child(3n){
+            /* color: green; */
+        }
+        /* 4n */
+        ul li:nth-child(4n+1){
+            color: red;
+        }
+    </style>
+    <ul>
+        <li>List Item 1</li>
+        <li>List Item 2</li>
+        <li>List Item 3</li>
+        <li>List Item 4</li>
+        <li>List Item 5</li>
+        <li>List Item 6</li>
+        <li>List Item 7</li>
+        <li>List Item 8</li>
+        <li>List Item 9</li>
+    </ul>
+</body>
+</html>

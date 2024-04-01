@@ -1,0 +1,137 @@
+:root {
+    --color-red: #ff2d2d;
+    --color-blue: #4db2ec;
+    --mt: unset;
+    --mb: unset;
+    --ml: unset;
+    --mr: unset;
+    --pt: unset;
+    --pb: unset;
+    --pl: unset;
+    --pr: unset;
+    --w: unset;
+    --h: unset;
+    --bg-color-heading: unset;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/* ==== TEXT AND BG ====  */
+
+.text-red {
+    color: var(--color-red);
+}
+
+.text-blue {
+    color: var(--color-blue);
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.bg-red {
+    background-color: var(--color-red);
+}
+
+.bg-blue {
+    background-color: var(--color-blue);
+}
+
+
+
+.font-14 {
+    font-size: 14px;
+}
+
+.font-16 {
+    font-size: 16px;
+}
+
+/* ==== LAYOUT ====  */
+/* ==== Flex ====  */
+.d-flex {
+    display: flex;
+}
+
+/* ==== Float ====  */
+.float-left {
+    float: left;
+}
+.float-right {
+    float: right;
+}
+.clearfix::after {
+    display: block;
+    content: ".";
+    clear: both;
+    visibility: hidden;
+    height: 0;
+}
+
+/* ==== Margin and Padding ====  */
+.mt {
+    margin-top: var(--mt);
+}
+.mb {
+    margin-bottom: var(--mb);
+}
+
+.ml {
+    margin-left: var(--ml);
+}
+
+.mr {
+    margin-right: var(--mr);
+}
+
+.pt {
+    padding-top: var(--pt);
+}
+
+.pb {
+    padding-bottom: var(--pb);
+}
+
+.pl {
+    padding-left: var(--pl);
+}
+
+.pr {
+    padding-right: var(--pr);
+}
+
+/* ==== Width, Height ====  */
+.w {
+    width: var(--w);
+}
+
+.h {
+    width: var(--h);
+}
+
+/* ==== List ====  */
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+ul li {
+    padding: 0;
+    margin: 0;
+}
+
+/* ==== Image ====  */
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
