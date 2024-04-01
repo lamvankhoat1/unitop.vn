@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Const</title>
+</head>
+<body>
+    <script>
+        const MAX = 10;
+        console.log(MAX);
+        // MAX = 5
+        /* 
+          Không thể gán lại giá trị cho hằng số
+        */
+
+       const person = {
+        age: 18,
+        name: "Khoa"
+       }
+       console.log(person)
+       person.age = 28;
+       console.log(person)
+       /* 
+         Có thể cập nhật lại giá trị cho object
+       */
+       
+       /* 
+         Khi khai báo phải gán luôn giá trị vì nếu không sẽ báo lỗi
+       */
+       const name = "Khoa";
+       console.log(name)
+    </script>
+</body>
+</html>

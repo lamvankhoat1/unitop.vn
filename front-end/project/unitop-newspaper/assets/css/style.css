@@ -10,6 +10,7 @@ header div.row:nth-child(1) {
 header #search {
     width: 247px;
     background-color: #131619;
+    padding: 1.5px 0;
 }
 
 header #search input {
@@ -39,7 +40,8 @@ header nav {
 }
 
 header nav ul li a {
-    display: inline-block;
+    /* display: inline-block; */
+    display: block;
     padding: 0 12px;
     padding-top: 10px;
     padding-bottom: 5px;
@@ -54,6 +56,10 @@ header nav ul li:hover a {
 }
 
 /* ==== Box====  */
+.box .box-head {
+    border-bottom: 2px solid var(--bg-color-heading);
+}
+
 .box .box-head h3 {
     background-color: var(--bg-color-heading);
     display: inline-block;
@@ -61,10 +67,7 @@ header nav ul li:hover a {
     padding: 0;
     margin: 0;
     padding: 1px 9px;
-}
-
-.box .box-body {
-    border-top: 2px solid var(--bg-color-heading);
+    font-weight: 600;
 }
 
 .box#hightlight {
@@ -113,6 +116,7 @@ header nav ul li:hover a {
 .box#hightlight .box-body div.post:first-child {
     padding-left: 0;
 }
+
 .box#hightlight .box-body div.post:last-child {
     padding-right: 0;
 }
@@ -129,13 +133,15 @@ header nav ul li:hover a {
 .row #news-post .post a.thumb {
     display: inline-block;
     /* width: 262px;*/
-    width: 35%; /* responsive */
+    flex-basis: 35%;
+    /* responsive */
     padding-right: 15px;
 }
 
 .row #news-post .post-detail {
     /* width: 457px; */
-    width: 65%; /* responsive */
+    flex-basis: 65%;
+    /* responsive */
     padding-left: 15px;
     margin-bottom: 40px;
 }
@@ -178,9 +184,7 @@ header nav ul li:hover a {
     --bg-color-heading: var(--color-red);
 }
 
-                            
-.topics-of-interest ul li {
-}
+
 
 .topics-of-interest ul li a {
     text-decoration: none;
@@ -202,11 +206,13 @@ footer {
 #logo-footer {
     display: block;
 }
-.box.about-us  {
+
+.box.about-us {
     width: 672px;
 }
 
-.box.about-us h3, .box.follow-us h3{
+.box.about-us h3,
+.box.follow-us h3 {
     font-size: 18px;
     color: #f6f6f6;
     padding-left: 0;
@@ -216,14 +222,16 @@ footer {
     flex: 1;
 }
 
-.box.follow-us .box-body{
+.box.follow-us .box-body {
     justify-content: space-between;
 }
 
 .box.follow-us a {
     color: #eeeeee;
     display: block;
-    font-size: 23px;
+    /* font-size: 23px; */
+    background-color: #434648;
+    padding: 5px 12px;
 }
 
 .box.follow-us a:hover {
@@ -243,6 +251,7 @@ footer {
 #copyright p {
     margin: 0;
     padding: 0;
+    color: white;
 }
 
 #copyright .list-link {
@@ -252,7 +261,18 @@ footer {
 
 
 
-#copyright .container, #copyright .list-link {
-    color: white;
+#copyright .container,
+#copyright .list-link {
     justify-content: space-between;
+}
+
+#copyright .container,
+#copyright .list-link a {
+    color: white;
+}
+
+#copyright .container,
+#copyright .list-link a:hover {
+    text-decoration: none;
+    color: var(--color-blue);
 }

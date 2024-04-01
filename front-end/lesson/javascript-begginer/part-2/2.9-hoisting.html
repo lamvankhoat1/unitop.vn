@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoisting</title>
+</head>
+<body>
+    <script>
+        b = 10;
+        var b = 5;
+        document.write(b);
+        /* 
+          var có thể sử dụng trước rồi khai báo sau
+        */
+
+        a = 8;
+        let a;
+
+        /* 
+          đoạn này sẽ báo lỗi, vì phải khai báo let trước rồi sử dụng biến sau
+        */
+    </script>
+</body>
+</html>
