@@ -80,6 +80,7 @@ header nav ul li:hover a {
 
 .box#hightlight .box-head {
     --bg-color-heading: #23282d;
+    border-bottom: unset;
 }
 
 .box#hightlight .box-body div.post {
