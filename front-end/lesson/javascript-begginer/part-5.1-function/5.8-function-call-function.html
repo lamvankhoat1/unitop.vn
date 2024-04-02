@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hàm gọi hàm</title>
+</head>
+<body>
+    <script>
+        // tính tổng các số chẵn từ 1 đến n
+        function check_even(number) {
+            return (number%2 == 0) ?true:false
+        }
+
+        function total_even(n) {
+            let t = 0
+            for(let i=1; i<=n; i++){
+                if(check_even(i)) {
+                    t+=i;
+                }
+            }
+            return t;
+        }
+
+        document.write(total_even(10))
+    </script>
+</body>
+</html>

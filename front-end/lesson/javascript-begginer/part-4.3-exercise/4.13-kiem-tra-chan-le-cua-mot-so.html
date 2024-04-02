@@ -14,8 +14,12 @@
           output: 5 là số lẻ
         */
         let n = 5;
-        let result = (n % 2 == 0) ? `${n} là số chẵn` : `${n} là số lẻ`;
-       document.write(result)
+        // let result = (n % 2 == 0) ? `${n} là số chẵn` : `${n} là số lẻ`;
+        if(n % 2 == 0) {
+            document.write(`${n} là số chẵn`);
+        } else {
+            document.write(`${n} là số lẻ`);
+        }
     </script>
 </body>
 
