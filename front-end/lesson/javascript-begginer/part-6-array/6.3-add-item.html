@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm phần tử vô mảng</title>
+</head>
+<body>
+    <script>
+        // Thêm người dùng
+        let list_users = ["Cương", "Phong", " Tuấn"];
+        list_users.push("Hằng");
+        list_users.unshift("Linh");
+        console.table(list_users)
+        // Lọc ra số chẵn
+        let list_numbers = [2, 4,2,4,52,4, 6,7,8,3,1,678,1334];
+        let list_even = [];
+        for (const number of list_numbers) {
+            if(number%2 == 0){
+                list_even.push(number);
+            }
+        }
+        console.log(list_even)
+    </script>
+</body>
+</html>
