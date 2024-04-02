@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vòng lặp for ... of</title>
+</head>
+
+<body>
+    <script>
+        /* 
+          Tính tổng các số chẵn
+        */
+        let number_list = [2, 4, 2, 5, 6, 4, 6, 7, 8, 4, 2, 4, 6, 7, 4, 2, 9, 0];
+        let result = 0;
+        for (const number of number_list) {
+            if (number % 2 == 0) {
+                result += number;
+            }
+        }
+        console.log(result);
+    </script>
+</body>
+
+</html>

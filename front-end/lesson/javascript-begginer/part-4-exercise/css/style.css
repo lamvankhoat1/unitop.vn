@@ -1,0 +1,48 @@
+:root {
+    --main-color: #27ae60
+}
+
+#wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.box .box-head {
+    border-bottom: 2px solid var(--main-color);
+}
+
+.box .box-head h3{
+    font-weight: 600;
+    background-color: var(--main-color);
+    display: inline-block;
+    color: white;
+    padding: 3px 5px;
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+ul#list-exercises {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+
+ul#list-exercises li a {
+    text-decoration: none;
+    color: rgb(29, 29, 29);
+    text-transform: uppercase;
+}
+
+ul#list-exercises li:hover a {
+    color: var(--main-color);
+} 
+
+
+

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính tổng chuỗi S luỹ thừa</title>
+</head>
+
+<body>
+    <script>
+        /* 
+            Tính tổng S = 1 +	2^2+	3^2 + 4^2 + ... + n^2	
+            input: n = 3	
+            Output: S = 14	
+        */
+        let n = 3;
+        let S = 0;
+        for (let i = 0; i <= n; i++) {
+            S += i**2;
+        }
+        document.write("S = " + S);
+    </script>
+</body>
+
+</html>

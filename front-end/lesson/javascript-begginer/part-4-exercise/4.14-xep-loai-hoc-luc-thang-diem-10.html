@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xếp loại học lực thang điểm 10</title>
+</head>
+<body>
+    <script>
+        /* 
+          input: mark = 5
+          output: trung bình
+        */
+        let mark = 5;
+        let isValidMark = (0<=mark && mark <= 10) ? true : false;
+        if(isValidMark) {
+            if(mark < 4) {
+                document.write('Yếu')
+            } else if(mark < 7) {
+                document.write('Trung bình')
+            } else if(mark < 8) {
+                document.write('Khá')
+            } else {
+                document.write('Giỏi');
+            }
+            
+        } else {
+            document.write('Điểm số không hợp lệ, vui lòng nhập điểm số trong khoảng 0 đến 10');
+        }
+    </script>
+</body>
+</html>

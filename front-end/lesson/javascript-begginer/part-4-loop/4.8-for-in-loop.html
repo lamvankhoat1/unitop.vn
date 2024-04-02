@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vòng lặp for ... in </title>
+</head>
+<body>
+    <script>
+        let person = {
+            name: "Khoa",
+            age: 28,
+            gender: "male",
+            born: "1996"
+        }
+
+        for (info in person){
+            console.log(`${info}: ${person[info]}`);
+        }
+
+        let myColors = ['red', 'green', 'blue'];
+        for (const key in myColors) {
+            console.log(myColors[key]);
+        }
+    </script>
+</body>
+</html>
