@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter JS</title>
+</head>
+
+<body>
+    <script>
+        /* 
+          Lọc các số lẻ trong mảng
+        */
+        let numbers_list = [2, 4, 5, 1, 21, 67, 89];
+        let result = [];
+
+        function checkOdd(number) {
+            return number%2 == 1;
+        }
+
+        result = numbers_list.filter(checkOdd)
+
+        console.log(result);
+    </script>
+</body>
+
+</html>

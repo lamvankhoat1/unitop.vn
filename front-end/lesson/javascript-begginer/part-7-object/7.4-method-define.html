@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method Define</title>
+</head>
+
+<body>
+    <script>
+        let number = {
+            a: 10, b: 5,
+            sum: function () {
+                return this.a + this.b;
+            }
+        }
+
+        number.minus = function(){
+            return this.a - this.b;
+        }
+
+        console.log(number.sum());
+        console.log(number.minus());
+    </script>
+</body>
+
+</html>

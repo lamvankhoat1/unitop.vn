@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm Min Max trong mảng</title>
+</head>
+
+<body>
+    <script>
+        let numbers_list = [2, 4, 5, 1, 21, 67, 89];
+        numbers_list.sort((a, b) => a - b);
+        console.log(numbers_list)
+        let min = numbers_list[0];
+        let max = numbers_list[numbers_list.length - 1];
+        console.log("min", min, "max", max)
+    </script>
+</body>
+
+</html>

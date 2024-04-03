@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cập nhật giá trị mảng qua forEach (callback)</title>
+</head>
+
+<body>
+    <script>
+        /* 
+          Cập nhật các giá trị trong mảng tăng lên gấp 15 lần
+        */
+       let numbers_list = [2, 4, 5, 1, 21, 67, 89];
+        numbers_list.forEach(multi15)
+
+        function multi15(currentNumber, index, arr) {
+            arr[index] = currentNumber * 15;
+        }
+
+        console.log(numbers_list)
+    </script>
+</body>
+
+</html>

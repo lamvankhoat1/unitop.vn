@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sắp xếp và đảo ngược mảng</title>
+</head>
+
+<body>
+    <script>
+        let chars_list = ["a", "s", "d", "f", "g", "h", "j", "k", "l"];
+        chars_list.sort();
+        console.log(chars_list)
+
+        let numbers_list = [2, 4, 5, 1, 21, 67, 89];
+        numbers_list.sort(function (a, b) {
+            return a - b;
+        });
+        console.log(numbers_list);
+    </script>
+</body>
+
+</html>

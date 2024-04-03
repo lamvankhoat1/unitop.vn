@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Each</title>
+</head>
+<body>
+    <script>
+        /* 
+          Tính tổng các số trong mảng
+        */
+        
+        let numbers_list = [2, 4, 5, 1, 21, 67, 89];
+        let total = 0;
+        numbers_list.forEach(function(currentNumber, index, arr){
+            total += currentNumber
+        })
+        console.log(total)
+    </script>
+</body>
+</html>

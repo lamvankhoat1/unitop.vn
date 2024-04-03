@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo, cập nhật, xoá thuộc tính</title>
+</head>
+
+<body>
+    <script>
+        let person = {
+            firstName: "Khoa",
+            lastName: "Trần Lâm Văn",
+            age: 28,
+            gender: 'male'
+        }
+        // tạo thuộc tính mói
+        person.weight = 50;
+        // cập nhật thuộc tính mói
+        person.age = 29;
+        // xoá thuộc tính
+        delete(person.lastName);
+        console.log(person)
+    </script>
+</body>
+
+</html>

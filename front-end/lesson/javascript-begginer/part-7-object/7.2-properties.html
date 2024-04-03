@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truy xuất thuộc tính</title>
+</head>
+<body>
+    <script>
+        // Truy xuất thuộc tính
+        let person = {
+            firstName : "Khoa",
+            lastName: "Trần Lâm Văn",
+            age: 28,
+            gender: 'male'
+        }
+        // console.log(person.firstName);
+        // console.log(person['firstName']);
+        // Truy xuất thuộc tính qua vòng lặp
+        for (const info in person) {
+            console.log(`${info}: ${person[info]}`)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map JS</title>
+</head>
+
+<body>
+    <script>
+        /* 
+          Cập nhật các giá trị trong mảng tăng lên gấp 15 lần
+        */
+        let numbers_list = [2, 4, 5, 1, 21, 67, 89];
+        let new_numbers_list = numbers_list.map(function (currentNumber, index, arr) {
+            return currentNumber * 15;
+        })
+
+        console.log(new_numbers_list);
+    </script>
+</body>
+
+</html>
