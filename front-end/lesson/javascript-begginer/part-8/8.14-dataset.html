@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dataset</title>
+</head>
+<body>
+    <div id="demo" data-user="Khoa" data-age="28" data-birth=""></div>
+    <script>
+        let dataSet = document.getElementById("demo").dataset;
+        console.log(dataSet);
+        document.getElementById("demo").dataset.birth = "1996";
+        // html cũng sẽ thay đổi theo
+    </script>
+</body>
+</html>

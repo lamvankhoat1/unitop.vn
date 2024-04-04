@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClassList</title>
+</head>
+<body>
+    <p class="demo1 demo2 demo3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat quo voluptatem beatae obcaecati suscipit dolore nisi repellendus eaque quam aspernatur.</p>
+    <script>
+        let p = document.body.querySelector("p");
+        // console.log(p.className);
+        // console.log(p.classList.value)
+        // p.classList.add('demo4');
+        // console.log(p)
+        // p.classList.remove('demo2');
+        // console.log(p)
+        // p.classList.toggle('demo2');
+        // console.log(p)
+        p.classList.replace('demo2', 'demo2-replace');
+        console.log(p)
+    </script>
+</body>
+</html>

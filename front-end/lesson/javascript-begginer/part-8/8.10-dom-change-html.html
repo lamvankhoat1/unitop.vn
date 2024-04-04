@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Change HTML</title>
+</head>
+<body>
+    <div id="result"></div>
+    <script>
+        let person = {
+            name: "Khoa",
+            age: 28,
+
+            get _weight() {
+                return this.weight;
+            },
+
+            set _weight(w) {
+                this.weight = w;
+            }
+        }
+
+        /* 
+        nếu sử dụng get weight và set weight sẽ báo lỗi vì: 
+            Setter được gọi khi gán giá trị mới cho weight.
+            Gán giá trị mới cho weight trong setter.
+            Setter được gọi lại vì giá trị của weight đã thay đổi.
+            Lặp lại bước 2 và 3.
+            Lặp đi lặp lại như vậy sẽ khiến ngăn xếp cuộc gọi (call stack) bị tràn, dẫn đến lỗi Maximum call stack size exceeded.
+        */
+        
+        person._weight = "50";
+        
+        let result_id = document.getElementById("result");
+        result_id.innerHTML += "name: " + person.name + "<br>";
+        result_id.innerHTML += "age: " + person.age + "<br>";
+        result_id.innerHTML += "weight: " + person.weight + "<br>";
+    </script>
+</body>
+</html>
