@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set and Get</title>
+</head>
+
+<body>
+    <script>
+        let person = {
+            firstName: "Khoa",
+            lastName: "Tran",
+            get fullName() {
+                return this.firstName + " " + this.lastName;
+            },
+
+            set fullName(info) {
+                info = info.split(" ");
+                this.firstName = info[0];
+                this.lastName = info[info.length - 1];
+            }
+        }
+
+        // console.log(person.fullName)
+        person.fullName = "Tran Lam Van Khoa";
+        console.log(person.fullName);
+    </script>
+</body>
+
+</html>
