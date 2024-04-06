@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add event</title>
+</head>
+
+<body>
+    <!-- c1 -->
+    <button id="btn" onclick="show()">Click me</button><br>
+    <!-- c2 -->
+    <button id="btn-1">Click me 1</button><br>
+    <!-- c3 -->
+    <button id="btn-2">Click me 2</button><br>
+    <script>
+        // c1
+        function show() {
+            alert("show");
+        }
+        // c2
+        let btn1 = document.querySelector("#btn-1");
+        btn1.onclick = show;
+        // c3
+        let btn2 = document.getElementById("btn-2");
+        btn2.addEventListener("click", show);
+
+
+
+    </script>
+</body>
+
+</html>

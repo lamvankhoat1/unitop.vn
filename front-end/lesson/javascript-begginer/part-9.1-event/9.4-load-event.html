@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load Event</title>
+</head>
+<body>
+    
+    <img src="https://c1.staticflickr.com/7/6016/5937556510_c10c609588_b.jpg" alt="Rose flower" style="max-width: 100%;">
+    <script>
+        window.addEventListener("load", function() {
+            // alert("page loaded");
+        })
+
+        let img_element = document.body.querySelector("img");
+        img_element.addEventListener("load", function(e) {
+            // alert("img loaded");
+        })
+    </script>
+</body>
+</html>

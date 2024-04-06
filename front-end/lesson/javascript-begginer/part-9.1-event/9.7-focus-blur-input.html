@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus And Blur</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="username">
+    </form>
+    <script>
+        let input = document.forms[0].querySelector("input");
+        input.addEventListener("focus", function(e) {
+            e.target.style.background = "yellow";
+        })
+
+        input.addEventListener("blur", function(e) {
+            e.target.style.background = "white";
+        })
+    </script>
+</body>
+</html>

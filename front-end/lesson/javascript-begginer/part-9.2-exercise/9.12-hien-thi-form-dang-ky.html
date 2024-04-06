@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập: Hiển thị form đăng ký</title>
+</head>
+<body>
+    <!-- 
+        Hiển thị thông tin form đăng ký:	
+        - Fullname	
+        - Username	
+        - Password	
+        - City	
+        Tên: Cương	
+        Username: cuongpv	
+        Mật khẩu: unitop.vn	
+        Thành phổ: Hà Nội	
+     -->
+     <style>
+        form[id='register-form'], #result {
+            width: 500px;
+            margin: 15px auto;
+        }
+
+        label, input, button {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        button {
+            margin-top: 10px;
+        }
+
+     </style>
+     <form action="" id="register-form">
+        <fieldset>
+            <legend>Register Form</legend>
+            <label for="full-name">Fullname</label>
+            <input type="text" id="full-name" name="full-name">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password">
+            <label for="city">City</label>
+            <select name="city" id="city">
+                <option value="">---- Chọn ----</option>
+                <option value="1">Hà Nội</option>
+                <option value="2">TP HCM</option>
+                <option value="3">Đà Nẵng</option>
+                <option value="4">Thành phố khác</option>
+            </select>
+
+            <button type="submit">Register Now</button>
+        </fieldset>
+     </form>
+     <div id="result">
+
+     </div>
+
+     <script>
+        let form_register = document.forms["register-form"];
+        let person = new Object();
+        form_register.addEventListener("submit", getInfo);
+        form_register.addEventListener("submit", showInfo);
+
+        function getInfo(e) {
+            person.fullName = getValueFromElementDom("#full-name")
+            person.userName = getValueFromElementDom("#username")
+            person.passWord = getValueFromElementDom("#password")
+            person.cityCode = Number(getValueFromElementDom("#city"));
+            person.cityName = form_register.querySelector(`select#city option:nth-child(${person.cityCode + 1})`).innerHTML;
+            e.preventDefault();
+        }
+
+        function showInfo(e) {
+            let result_id = document.getElementById("result");
+            result_id.innerHTML = "";
+            result_id.innerHTML += "<b>Tên: </b>" + person.fullName + "<br>";
+            result_id.innerHTML += "<b>Username: </b>" + person.userName + "<br>";
+            result_id.innerHTML += "<b>Password: </b>" + person.passWord + "<br>";
+            result_id.innerHTML += "<b>Thành phố: </b>" + person.cityName;
+            e.preventDefault();
+        }
+
+        function getValueFromElementDom(css) {
+            return document.querySelector(css).value;
+        }
+     </script>
+</body>
+</html>

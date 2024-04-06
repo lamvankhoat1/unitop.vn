@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Event</title>
+</head>
+
+<body>
+    <style>
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            text-transform: capitalize;
+            margin-right: 20px;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        input {
+            display: block;
+            margin: 5px 0;
+        }
+    </style>
+    <form action="" id="form-register">
+        <fieldset>
+            <legend>ĐĂNG KÝ</legend>
+            <label for="username">username</label>
+            <input type="text" id="username" name="username">
+            <label for="password">password</label>
+            <input type="password" id="password" name="password">
+            <label for="city">Chọn thành phố</label>
+            <select name="city" id="city">
+                <option value="0">Đà Nẵng</option>
+                <option value="1">Hồ Chí Minh</option>
+                <option value="2">Hà Nội</option>
+            </select>
+        </fieldset>
+    </form>
+
+    <script>
+        let form_register = document.forms['form-register'];
+        let username_id = form_register.querySelector("#username");
+        let city = form_register.querySelector("#city");
+
+        username_id.addEventListener("change", function(e) {
+            console.log(e.target.value);
+        })
+
+        city.addEventListener("change", function(e) {
+            console.log(e.target.value);
+        })
+    </script>
+</body>
+
+</html>
