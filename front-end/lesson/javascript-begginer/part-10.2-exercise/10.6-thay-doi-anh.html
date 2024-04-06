@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập: Thay đổi ảnh</title>
+</head>
+
+<body>
+    <style>
+        #wrapper {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #list-product {
+            display: flex;
+            flex: 1;
+            justify-content: center;
+        }
+
+        .product img {
+            width: 200px;
+            padding: 15px;
+            cursor: pointer;
+        }
+    </style>
+    <div id="wrapper">
+        <h1>Thay đổi ảnh</h1>
+        <div id="list-product">
+            <div class="product" data-image-1="images/libazz-fashion-bag-1.jpeg"
+                data-image-2="images/libazz-fashion-bag-2.jpeg">
+                <img src="images/libazz-fashion-bag-1.jpeg" alt="libazz-fashion-bag-1" class="image-1">
+            </div>
+            <div class="product" data-image-1="images/libazz-fashion-jacket-1.jpeg"
+                data-image-2="images/libazz-fashion-jacket-2.jpeg">
+                <img src="images/libazz-fashion-jacket-1.jpeg" alt="libazz-fashion-jacket-1.jpeg" class="image-1">
+            </div>
+        </div>
+
+        <script>
+            let product_elements = document.querySelectorAll(".product");
+            for (const element of product_elements) {
+                element.addEventListener("mouseover", changeImage)
+                element.addEventListener("mouseout", changeImage)
+            }
+
+            function changeImage(e) {
+                let img = this.querySelector("img");
+                img.classList.toggle("image-1");
+                img.classList.toggle("image-2");
+                let img_src = this.dataset[img.classList.value];
+                img.src = img_src;
+            }
+        </script>
+    </div>
+</body>
+
+</html>
