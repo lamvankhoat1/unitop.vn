@@ -105,6 +105,7 @@ function editTask(e) {
 }
 
 function removeTask(e) {
+    e.stopPropagation();
     let confirmDialogue = confirm("Bạn có chắc muốn xoá công việc này?");
     if(!confirmDialogue) {
         return "KHÔNG XOÁ";
@@ -116,7 +117,6 @@ function removeTask(e) {
     currentTask.remove();
     saveToLocaStorage(taskList_array)
     console.log(taskList_array)
-    e.stopPropagation();
 }
 
 // local storage
