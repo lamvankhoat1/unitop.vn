@@ -53,7 +53,7 @@ function addTask(e) {
         task_input.value = "";
         task_input.blur();
         addClickEventForAllTaskItem();
-        return "CANCLE";
+        return "CANCEL";
     }
 
     let taskName = getTaskName();
@@ -61,9 +61,16 @@ function addTask(e) {
     for(let task of taskList_array) {
         if(taskName.trim().toUpperCase() == task.taskName.trim().toUpperCase()) {
             alert("Công việc này đã được thêm");
-            return "CANCLE";
+            return "CANCEL";
         }
     }
+    // empty taskname
+    if(taskName.toString().trim() == "") {
+        alert("Chưa có dữ liệu để nhập");
+        return "CANCEL"
+    }
+
+    // ADD TASK
     taskBodyElement.innerHTML += templateHTMLNewTask(taskName);
     // addEventListent For New Task
     addClickEventForAllTaskItem()
