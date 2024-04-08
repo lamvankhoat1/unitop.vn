@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm nhiều phần tử con</title>
+</head>
+<body>
+    <ul id="main-menu">
+        <li>Home page</li>
+        <li>Contact</li>
+        <li>Support</li>
+    </ul>
+    <!-- Product, About -->
+    <script>
+        let mainMenu = document.querySelector("#main-menu");
+        let li1, li2;
+        li1 = document.createElement("li");
+        li1.innerHTML = "Product";
+        li2 = document.createElement("li");
+        li2.innerHTML = "About";
+
+        mainMenu.append(li1, li2);
+    </script>
+</body>
+</html>

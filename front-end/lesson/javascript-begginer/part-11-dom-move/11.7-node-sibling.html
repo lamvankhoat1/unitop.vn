@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trỏ đến phần tử anh chị em</title>
+</head>
+<body>
+    <ul id="main-menu">
+        <li>list item 1</li>
+        <li class="current-item">list item 2</li>
+        <li>list item 3</li>
+        <li>list item 4</li>
+    </ul>
+    <script>
+        let item1 = document.querySelector(".current-item").previousElementSibling;
+        let item3 = document.querySelector(".current-item").nextElementSibling;
+        console.log(item1)
+        console.log(item3)
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Element</title>
+</head>
+<body>
+    
+    <script>
+        let body = document.body;
+        let p = document.createElement("p");
+        p.innerHTML = "unitop.vn"
+        p.className = "ads"
+
+        let divWrapper = document.createElement("div")
+        divWrapper.id = "wrapper";
+        divWrapper.innerHTML = "Div wrapper"
+
+        body.appendChild(p);
+        body.appendChild(divWrapper);
+
+    </script>
+</body>
+</html>

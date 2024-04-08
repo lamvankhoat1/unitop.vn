@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Before</title>
+</head>
+<body>
+    <div id="languages">
+        <div class="item">HTML</div>
+        <div class="item current">CSS</div>
+        <div class="item">JAVASCRIPT</div>
+        <div class="item">HTML</div>
+    </div>
+
+    <script>
+        let languages_id = document.querySelector("#languages");
+        let newItem, currentItem;
+        newItem = document.createElement("div");
+        newItem.className = "item";
+        newItem.innerHTML = "PHP";
+        newItem.style.color = "red"
+
+        currentItem = document.querySelector("div.current")
+        currentItem.style.fontWeight = "bold";
+        languages_id.insertBefore(newItem, currentItem);
+    </script>
+</body>
+</html>

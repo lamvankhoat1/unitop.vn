@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replace</title>
+</head>
+
+<body>
+    <div id="languages">
+        <div class="item">HTML</div>
+        <div class="item current">CSS</div>
+        <div class="item">JAVASCRIPT</div>
+        <div class="item">HTML</div>
+    </div>
+
+    <script>
+        let parentElement = document.querySelector("#languages");
+        let currentElement = document.querySelector(".current");
+        let newElement = document.createElement("div");
+        newElement.className = "item";
+        newElement.innerHTML = "PHP (CSS OLD)";
+
+        parentElement.replaceChild(newElement, currentElement);
+    </script>
+</body>
+
+</html>

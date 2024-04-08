@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parent node</title>
+</head>
+<body>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+    <ul id="main-menu">
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3
+            <ul id="sub-menu">
+                <li>item 3.1</li>
+                <li>item 3.2</li>
+            </ul>
+        </li>
+        <li>item 4</li>
+        <li>item 5</li>
+    </ul>
+    <script>
+        let pNode = document.querySelector("p");
+        console.log(pNode.parentNode);
+        let subMenuNode = document.querySelector("#sub-menu")
+        console.log(subMenuNode.nodeName, subMenuNode.parentNode.nodeName)
+    </script>
+</body>
+</html>

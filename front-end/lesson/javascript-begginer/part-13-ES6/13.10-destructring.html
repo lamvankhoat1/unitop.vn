@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructring</title>
+</head>
+
+<body>
+    <script>
+        // ví dụ 1: phân ra mảng, đối tượng và lưu vào biến;
+        {
+            let [a, b, c] = [10, 5, 7];
+            console.log(a, b, c);
+        }
+
+        {
+            let myObject = {
+                fullName: "Tran Lam Van Khoa",
+                email: "lamvankhoat1@gmail.com"
+            };
+            let { fullName, email } = myObject;
+            console.log(fullName, email);
+        }
+        // ví dụ 2: giá trị mặc định
+        {
+            let [a, b, c, d = 17] = [10, 5, 7];
+            console.log(a, b, c, d);
+        }
+        // ví dụ 3: rest
+        {
+            let [a, b, ...moreNumber] = [3, 26, 18, 53, 54, 32];
+            console.log(moreNumber);
+        }
+        // ví dụ 4: bỏ qua phần tử
+        {
+            let [a, , c] = [3, 6, 1]
+            console.log(a, c);
+        }
+        // ví dụ 5: hoán đổi giá trị
+        {
+            let [a, b] = [6, 9];
+            [b, a] = [a, b];
+            console.log(a, b);
+        }
+        // ví dụ 6: nhận giá trị từ function
+        {
+            let myFunc = (a, b) => {
+                return [a, b]
+            };
+            let [a, b] = myFunc(2, 5);
+            console.log(a, b);
+        }
+    </script>
+</body>
+
+</html>

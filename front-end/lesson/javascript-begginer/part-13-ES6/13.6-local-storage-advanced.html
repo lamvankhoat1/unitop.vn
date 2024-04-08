@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lưu dữ liệu vô localstorage chuyên sâu</title>
+</head>
+
+<body>
+    <script>
+        let users = [
+            {
+                "name": "Khoa",
+                "age": 28,
+                "email": "lamvankhoat1@gmail.com"
+            },
+            {
+                "name": "Teacher Cương",
+                "age": 39,
+                "email": "unitop.vn@gmail.com"
+            }
+        ]
+        localStorage.setItem("data", JSON.stringify(users));
+        console.log(JSON.parse(localStorage.getItem("data")))
+    </script>
+</body>
+
+</html>

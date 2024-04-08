@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array map render html</title>
+</head>
+<body>
+    <style>
+        .d-flex {
+            display: flex;
+        }
+
+        a {
+            display: block;
+        }
+
+        img {
+            max-width: 209px;
+            height: auto;
+        }
+
+        #wrapper {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .product {
+            text-align: center;
+        }
+    </style>
+    <div id="wrapper">
+        <div class="product-list d-flex">
+            <!-- <div class="product">
+                <a href="#"><img src="https://cdn.tgdd.vn/Products/Images/42/305658/iphone-15-pro-max-blue-thumbnew-600x600.jpg" alt="iPhone 15 Pro Max"></a>
+                <a href="#">iPhone 15 Pro Max</a>
+                <div class="price">
+                    <div class="old-price">34.990.000₫</div>
+                    <div class="new-price">29.990.000₫</div>
+                </div>
+            </div>
+            <div class="product">
+                <a href="#"><img src="https://cdn.tgdd.vn/Products/Images/42/305658/iphone-15-pro-max-blue-thumbnew-600x600.jpg" alt="iPhone 15 Pro Max"></a>
+                <a href="#">iPhone 15 Pro Max</a>
+                <div class="price">
+                    <div class="old-price">34.990.000₫</div>
+                    <div class="new-price">29.990.000₫</div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+    <script>
+        let phone_list = [
+            {
+                url: "#",
+                name: "iPhone 15 Pro Max",
+                img: "https://cdn.tgdd.vn/Products/Images/42/305658/iphone-15-pro-max-blue-thumbnew-600x600.jpg",
+                oldPrice: 34990000,
+                newPrice: 29990000
+            },
+            {
+                url: "#",
+                name: "iPhone 15 Pro",
+                img: "https://cdn.tgdd.vn/Products/Images/42/299033/iphone-15-pro-blue-thumbnew-600x600.jpg",
+                oldPrice: 25990000,
+                newPrice: 28990000
+            },
+            {
+                url: "#",
+                name: "iPhone 15 Plus",
+                img: "https://cdn.tgdd.vn/Products/Images/42/303891/iphone-15-plus-xanh-la-128gb-thumb-600x600.jpg",
+                oldPrice: 25990000,
+                newPrice: 28990000
+            },
+            {
+                url: "#",
+                name: "iPhone 15",
+                img: "https://cdn.tgdd.vn/Products/Images/42/281570/iphone-15-hong-thumb-1-600x600.jpg",
+                oldPrice: 25990000,
+                newPrice: 28990000
+            },
+            {
+                url: "#",
+                name: "Samsung Galaxy S24 5G",
+                img: "https://cdn.tgdd.vn/Products/Images/42/319665/samsung-galaxy-s24-yellow-thumb-600x600.png",
+                oldPrice: 25990000,
+                newPrice: 28990000 
+            }
+        ]
+
+        let product_template_html_string = (url, urlImage, name, oldPrice, newPrice) => {
+            return `            <div class="product">
+                <a href="${url}"><img src="${urlImage}" alt="${name}"></a>
+                <a href="${url}">${name}</a>
+                <div class="price">
+                    <div class="old-price">${oldPrice}</div>
+                    <div class="new-price">${newPrice}</div>
+                </div>
+            </div>`
+        }
+
+        let productList = document.querySelector(".product-list");
+        productList.innerHTML = phone_list.map(phoneObject => product_template_html_string(phoneObject.url, phoneObject.img, phoneObject.name, phoneObject.oldPrice, phoneObject.newPrice)).join("");
+    </script>
+</body>
+</html>

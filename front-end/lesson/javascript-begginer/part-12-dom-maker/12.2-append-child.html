@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm 1 element vào cha</title>
+</head>
+<body>
+    <!-- <div id="wrapper">
+        <p>Hello World</p>
+        <ul>
+            <li>list item 1</li>
+            <li>list item 2</li>
+            <li>list item 3</li>
+            <li>list item 4</li>
+            <li>list item 5</li>
+        </ul>
+    </div> -->
+    <script>
+        let divWrapperId = document.createElement("div");
+        divWrapperId.id = "wrapper";
+        let p = document.createElement("p");
+        p.innerText = "Hello World";
+        let ul = document.createElement("ul");
+        for(let i=0; i< 5; i++){
+            let li = document.createElement("li");
+            li.innerHTML = "List Item " + (i+1);
+            ul.appendChild(li)
+        }
+
+        document.body.appendChild(divWrapperId)
+        divWrapperId.appendChild(p);
+        divWrapperId.appendChild(ul);
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhân bản element</title>
+</head>
+
+<body>
+    <h1>cloneNode Javascript</h1>
+    <ul id="menu">
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#">Giới thiệu</a></li>
+        <li class="current"><a href="#">Khóa học</a>
+            <ul class="sub-menu">
+                <li><a href="">Html Css 21 Ngày</a></li>
+                <li><a href="">Php Master</a></li>
+            </ul>
+        </li>
+    </ul>
+
+    <script>
+        let currentLi = document.querySelector("li.current");
+        let cloneLi = currentLi.cloneNode(true);
+        
+        document.querySelector("#menu").appendChild(currentLi) //not working
+        document.querySelector("#menu").appendChild(cloneLi) // working
+
+    </script>
+</body>
+
+</html>

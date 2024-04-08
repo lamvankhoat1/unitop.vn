@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator</title>
+</head>
+<body>
+    <script>
+        // embed element
+        let first_array = [4, 6, 10];
+        let second_array = [...first_array, 25, 10]
+        console.log(second_array);
+        // copy array
+        let new_array = [...first_array];
+        console.log(new_array);
+        // contact array
+        let third_array = [...second_array, ...first_array];
+        console.log(third_array)
+    </script>
+</body>
+</html>
