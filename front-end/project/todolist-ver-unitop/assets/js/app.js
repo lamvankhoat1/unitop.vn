@@ -52,7 +52,7 @@ function addTask(e) {
         task_input.value = "";
         task_input.blur();
         addClickEventForAllTaskItem();
-        return;
+        return "CANCLE";
     }
 
     let taskName = getTaskName();
@@ -60,7 +60,7 @@ function addTask(e) {
     for(let task of taskList_array) {
         if(taskName.trim().toUpperCase() == task.taskName.trim().toUpperCase()) {
             alert("Công việc này đã được thêm");
-            return;
+            return "CANCLE";
         }
     }
     taskBodyElement.innerHTML += templateHTMLNewTask(taskName);
