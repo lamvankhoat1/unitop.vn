@@ -1,5 +1,6 @@
 const taskBodyElement = document.querySelector("#task-body");
 let task_input = document.querySelector("#task-head input");
+task_input.focus();
 var taskList_array = [];
 let addTaskElement = document.querySelector("#add-task");
 addClickEvent(addTaskElement, addTask);
