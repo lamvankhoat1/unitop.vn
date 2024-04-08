@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setter and Getter</title>
+</head>
+
+<body>
+    <script>
+        class User {
+            constructor(fullname, age) {
+                this.fullname = fullname,
+                    this.age = age;
+            }
+            // begin
+            set setFullname(fullname) {
+                this.fullname = fullname;
+            }
+            get getFullname(){
+                return this.fullname;
+            }
+            // end
+            show() {
+                return `Họ và tên: ${this.fullname}\nTuổi: ${this.age}`
+            }
+        }
+
+        class Student extends User {
+            constructor(fullname, age, std_year) {
+                super(fullname, age),
+                    this.std_year = std_year
+            }
+            introduce() {
+                return super.show() + `\nSinh viên năm ${this.std_year}`;
+            }
+        }
+
+        let myInfo = new Student("Tran Khoa", 28, 5);
+        myInfo.setFullname = "Trần Lâm Văn Khoa";
+        console.log(myInfo.show());
+    </script>
+</body>
+
+</html>

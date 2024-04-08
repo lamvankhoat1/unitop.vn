@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kế thừa và super class</title>
+</head>
+
+<body>
+    <script>
+        class User {
+            constructor(fullname, age) {
+                this.fullname = fullname,
+                    this.age = age;
+            }
+            show() {
+                return `Họ và tên: ${this.fullname}\nTuổi: ${this.age}`
+            }
+        }
+
+        class Student extends User{
+            constructor(fullname, age, std_year) {
+                super(fullname, age),
+                this.std_year = std_year
+            }
+            introduce() {
+                return super.show() + `\nSinh viên năm ${this.std_year}`;
+            }
+        }
+
+        let myInfo = new Student("Trần Lâm Văn Khoa", 28, 5);
+        console.log(myInfo.introduce());
+    </script>
+</body>
+
+</html>

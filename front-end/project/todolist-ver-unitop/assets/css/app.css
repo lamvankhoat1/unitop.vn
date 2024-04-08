@@ -1,0 +1,79 @@
+:root {
+    --color-main: #1e272e
+}
+
+#app-to-do-list {
+    background-color: var(--color-main);
+    padding: 23px 30px 30px 30px;
+    width: 450px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+/* ==== TASK HEAD ====  */
+
+#task-head {
+    --color-text: #FF6F6F;
+}
+
+#task-head form input{
+    flex: 1;
+    background-color: var(--color-main);
+    font-size: 16px;
+    outline: none;
+    border: none;
+    padding: 8px;
+    padding-left: 0;
+    color: var(--color-text);
+}
+
+#task-head form input::placeholder {
+    color: var(--color-text);
+}
+
+#task-head form button#add-task {
+    outline: none;
+    border: none;
+    background-color: #FF2B2B;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* ==== TASK BODY ====  */
+#task-body {
+    padding: 27px 0;
+}
+
+.task-item {
+    color: #C7C7C7;
+    padding: 8px 0;
+    border-bottom: 1px solid #525252
+}
+
+.task-item:hover {
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.task-item .task-action i[class^="fa-"]{
+    color: #A4A4A4;
+    font-size: 13px;
+    padding: 3.5px 5.1px;
+    cursor: pointer;
+}
+
+.task-item .task-action i[class^="fa-"]:hover {
+    color: #FFFFFF;
+}
+
+.task-item.complete {
+    text-decoration: line-through;
+    color: #676767;
+}
+/* ==== TASK FOOTER ====  */
+#task-footer {
+    color: #828282;
+    font-style: italic;
+    font-size: 13px;
+}

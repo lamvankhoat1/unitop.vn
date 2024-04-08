@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class</title>
+</head>
+<body>
+    <div id="result"></div>
+    <script>
+        class User{
+            constructor(fullname) {
+                this.fullname = fullname;
+            }
+            show(){
+                return `Xin chào ${this.fullname}`;
+            }
+            render(css){
+                document.querySelector(css).innerHTML = this.show();
+            }
+        }
+
+        let myInfo = new User("Trần Lâm Văn Khoa");
+        console.log(myInfo.show());
+        myInfo.render("#result");
+    </script>
+</body>
+</html>

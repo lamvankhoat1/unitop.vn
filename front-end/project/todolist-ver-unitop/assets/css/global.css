@@ -1,0 +1,23 @@
+/* ==== FLEX ====  */
+.d-flex {
+    display: flex;
+}
+.justify-content-space-between {
+    justify-content: space-between;
+}
+/* ==== FLOAT ====  */
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.clearfix::after {
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+    content: ".";
+}
