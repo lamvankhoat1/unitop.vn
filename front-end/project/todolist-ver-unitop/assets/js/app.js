@@ -104,6 +104,17 @@ function editTask(e) {
     preventDefault(e);
 }
 
+function cancleEditTask(e) {
+    if (e.key === "Escape"){
+        taskBodyElement.querySelector(".editting").classList.remove("editting");
+        task_input.value = "";
+        addTaskElement.innerHTML = "ADD TASK";
+        task_input.focus();
+    }
+}
+
+document.addEventListener("keydown", cancleEditTask);
+
 function removeTask(e) {
     let confirmDialogue = confirm("Bạn có chắc muốn xoá công việc này?");
     if(!confirmDialogue) {
