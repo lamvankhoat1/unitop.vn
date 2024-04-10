@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Thực hành: Đổi màu bằng Jquery</title>
+</head>
+<body>
+    <!-- 
+        Thực hành đổi màu text bằng jquery	
+        Chuẩn bị	
+        • Một đoạn text	
+        • Hai button tên: Đỏ, xanh	
+        Công việc	
+        • Khi click vào button đỏ => Text chuyển sang màu đỏ	
+        • Khi click vào button xanh => Text chuyển sang màu xanh	
+     -->
+     <button id="btn-red">red</button>
+     <button id="btn-green">green</button>
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis provident doloremque dolorem ad dolores illo autem nemo fugiat deserunt animi officiis sint obcaecati id sit quae, recusandae repudiandae quos quasi similique, fugit officia molestiae quas voluptatem natus. Culpa a distinctio iusto veritatis cupiditate possimus soluta, minus recusandae architecto. Animi, sapiente. Culpa dolorem, dolores tempore numquam deleniti dolorum nesciunt ab? Voluptate nesciunt fugiat iste quod reprehenderit reiciendis numquam totam officia ducimus debitis mollitia explicabo dolorum repellat dolores officiis vitae, laborum maxime voluptates, cumque eius, non dolore tempore! Magnam laboriosam consequuntur eligendi assumenda beatae voluptatum facere, ea animi ipsam iste dolores id nihil fugiat nisi? Reiciendis, pariatur! Accusamus aliquam eveniet sequi eaque aut, molestiae consequatur nisi fuga perspiciatis delectus earum atque, debitis autem iusto? Voluptate sunt ullam, perspiciatis expedita iusto voluptatum doloremque officia corporis eum tempore vel exercitationem porro eligendi quas ipsam asperiores id optio harum consequatur cupiditate? Nisi, quaerat? Pariatur cumque magnam, esse explicabo fugiat dolor atque placeat nesciunt odit dolore quaerat nemo nam amet animi sunt et officia magni, ipsum eius perferendis vero incidunt debitis cupiditate. Rerum magnam nisi a expedita molestiae tempora veniam ab aperiam officiis quasi illum sunt quod facere accusantium ipsa, quia iste assumenda laborum, iure exercitationem.</p>
+     <script>
+        $(document).ready(function(){
+        // btn-red
+          $("#btn-red").click(function() {
+            $("p").css('color', 'red');
+          })
+        //   btn-green
+        $("#btn-green").click(function() {
+          $("p").css('color', 'green');
+        })
+        })
+     </script>
+</body>
+</html>

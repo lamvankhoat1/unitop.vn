@@ -65,7 +65,7 @@ function addTask(e) {
         }
     }
     // empty taskname
-    if(taskName.toString().trim() == "") {
+    if(taskName.toString().trim().length < 3) {
         alert("Chưa có dữ liệu để nhập");
         return "CANCEL"
     }
