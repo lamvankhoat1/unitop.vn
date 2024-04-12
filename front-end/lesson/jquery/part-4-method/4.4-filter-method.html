@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhóm phương thức lọc</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <p>Đoạn văn số 1</p>
+    <p class="highlight">Đoạn văn số 2</p>
+    <p>Đoạn văn số 3</p>
+    <p>Đoạn văn số 4</p>
+    <p class="highlight">Đoạn văn số 5</p>
+
+    <script>
+        $(document).ready(function(){
+            // tô màu đỏ cho đoạn văn số 2
+            // $("p").eq("1").css("color", "red")
+            // style cho tất cả các thẻ p không có class highlight là màu green
+            // $("p").not(".highlight").css("color", "green");
+            // tìm ra các highlight cho màu đỏ
+            // $("p").filter(".highlight").css("color", "red");
+            // các đoạn văn từ vị trí thứ 2 thành màu đò
+            $("p").nextAll('.highlight').css("color", "red");
+        })
+    </script>
+</body>
+</html>

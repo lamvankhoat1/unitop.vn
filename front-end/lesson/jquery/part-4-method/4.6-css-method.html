@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>CSS Method</title>
+</head>
+<body>
+    <style>
+        .box {
+            padding: 50px 100px;
+            background-color: #333;
+            color: #fff;
+            float: left;
+        }
+    </style>
+    <div class="box">BOX</div>
+    <div id="result"></div>
+    <script>
+        // khi click vào kích thước box sẽ tăng gấp đôi, lấy ra giá trị background và in ra màn hình
+        $(document).ready(function(){
+          $(".box").click(function(){
+            $(this).css('padding', '100px 200px');
+            $("#result").text($(this).css("background-color"));
+          })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhóm phương thức class</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <style>
+        .highlight {
+            color: red;
+            background-color: yellow;
+        }
+    </style>
+    <!-- 
+        click vào văn bản sẽ thêm class highlight
+        click vào văn bản này sẽ loại bỏ highlight các văn bản khác
+     -->
+    <p>Đoạn văn số 1</p>
+    <p>Đoạn văn số 2</p>
+    <p>Đoạn văn số 3</p>
+    <p>Đoạn văn số 4</p>
+    <p>Đoạn văn số 5</p>
+    <script>
+        $(document).ready(function(){
+          $("p").click(function(){
+            $("p").removeClass("highlight");
+            $(this).toggleClass("highlight");
+          })
+        })
+    </script>
+</body>
+</html>

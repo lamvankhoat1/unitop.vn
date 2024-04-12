@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhóm phương thức thuộc tính</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <img src="images/hoa-hong.jpg" alt="" title="" style="width: 100px;"><br>
+    <a href="#" class="get-info-img">Lấy thông tin</a>
+    <script>
+        $(document).ready(function () {
+            //  click vào thẻ a và hiển thị link hình ảnh thông qua alert();
+            //  gán giá trị alt bằng 1 tên nào đó
+            //  huỷ giá trị src
+            $("a.get-info-img").click(function () {
+                //   alert($("img").attr("src"));
+                $("img")
+                    .attr("alt", "Hoa hồng đẹp")
+                    .attr("title", "Hoa hồng đẹp")
+                    .removeAttr("src")
+                
+                return false;
+            })
+        })
+    </script>
+</body>
+
+</html>

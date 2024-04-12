@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhóm phương thức giá trị</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <style>
+        form * {
+            display: block;
+            margin-top: 5px;
+        }
+    </style>
+    <form action="" id="form-login">
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
+        <input type="submit" value="Đăng nhập" name="submit">
+    </form>
+    <div id="result"></div>
+    <script>
+        // lấy username và password khi submit form và hiện lên màn hình
+        $("form#form-login").submit(function(){
+          let username = $("#username").val();
+          let password = $("#password").val();
+          
+          $("#result").html(`Username: ${username}<br>`);
+          $("#result").append(`Password: ${password}`)
+          return false;
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Filter Method</title>
+</head>
+
+<body>
+    <style>
+        ul.sub-menu {
+            display: none;
+        }
+    </style>
+    <ul id="main-menu">
+        <li><a href="">Menu 1</a></li>
+        <li><a href="">Menu 2</a>
+            <ul class="sub-menu">
+                <li><a href="">Menu 2.1</a></li>
+                <li><a href="">Menu 2.2</a></li>
+                <li><a href="">Menu 2.3</a></li>
+                <li><a href="">Menu 2.4</a></li>
+            </ul>
+        </li>
+        <li><a href="">Menu 3</a></li>
+        <li><a href="">Menu 4</a>
+            <ul class="sub-menu">
+                <li><a href="">Menu 4.1</a></li>
+                <li><a href="">Menu 4.2</a></li>
+                <li><a href="">Menu 4.3</a></li>
+                <li><a href="">Menu 4.4</a></li>
+            </ul>
+        </li>
+        <li><a href="">Menu 5</a></li>
+        <li><a href="">Menu 6</a></li>
+    </ul>
+    <script>
+        $(document).ready(function(){
+            // click vào li có sub menu thì sẽ hiện lên
+            // các phần tử a trong submenu chuyển sang màu đỏ
+            $("#main-menu li").click(function() {
+              $(this).children(".sub-menu").show();
+              $(this).children(".sub-menu").find("a").css('color', 'red');
+            })
+            // khi click vô thẻ a trong sub-menu thì li bên ngoài được tô màu
+            $(".sub-menu a").click(function(){
+              $(this).parents("ul.sub-menu").css("background", "yellow");
+              return false;
+            })
+          
+        })
+    </script>
+</body>
+
+</html>
