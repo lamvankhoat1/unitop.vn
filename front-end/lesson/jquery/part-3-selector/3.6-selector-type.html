@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector Type</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="box">
+        <a href="">Link 1</a>
+        <p>Văn bản 1</p>
+        <h2>Tiêu đề 1</h2>
+        <a href="">Link 2</a>
+        <p>Văn bản 2</p>
+        <a href="">Link 3</a>
+        <p>Văn bản 3</p>
+        <h2>Tiêu đề 2</h2>
+        <h2>Tiêu đề 3</h2>
+        <h2>Tiêu đề 4</h2>
+    </div>
+    <div class="box">
+        <h2>Tiêu đề 5</h2>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+          $("p:first-of-type").css('color', 'green')
+          $("p:last-of-type").css('color', 'red')
+          $("h2:only-of-type").css('color', 'blue')
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector Định Vị</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+        }
+    </style>
+    <div id="box-list-1" style="display: flex;">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <script>
+        $(".box:eq(4)").text(".box:eq(4)");
+        $(".box:first").text(`:first`);
+        $(".box:last").text(`:last`);
+        $(".box:gt(2)").css("border", "1px solid green")
+        $(".box:lt(1)").css("border", "1px solid blue")
+        $(".box:odd").css("background-color", "brown")
+        $(".box:even").css("background-color", "yellow")
+        $(".box:not(.box:eq(0))").css("height", "120px")
+        
+    </script>
+</body>
+</html>

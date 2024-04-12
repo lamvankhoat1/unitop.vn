@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Jquery bộ chọn theo thuộc tính</title>
+</head>
+
+<body>
+    <h1>Menu website</h1>
+    <a href="home.html" title="Trang chú"> Trang chú</a><br />
+    <a href="about.html" title="Giới thiệu">Giới thiệu</a><br />
+    <a href="product-clothes.html" title="Quần áo">Quần áo</a><br />
+    <a href="product-shoes.html" title="Giày">Giày</a><br />
+    <a href="contact.html" title="Liên hệ"> Liên hệ</a><br />
+    <script>
+        // 1. Tô màu đỏ cho trang chủ
+        $("[href='home.html']").css('color', 'red');
+        // 2. Tô màu #333 cho các phần tử không phải là trang chủ
+        $("[href!='home.html']").css('color', '#333');
+        // 3. Lấy tất cả menu product
+        $("[href*='product']").css('color', 'orange');
+
+    </script>
+</body>
+
+</html>

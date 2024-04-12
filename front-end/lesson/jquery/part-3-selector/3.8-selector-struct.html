@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector Cấp bậc</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="main-menu">
+        <li><a href="">Menu 1</a></li>
+        <li><a href="">Menu 2</a>
+            <ul class="sub-menu">
+                <li><a href="">Menu 2.1</a></li>
+                <li><a href="">Menu 2.2</a></li>
+                <li><a href="">Menu 2.3</a></li>
+            </ul>
+        </li>
+        <li><a href="">Menu 3</a></li>
+        <li><a href="">Menu 4</a></li>
+        <li><a href="">Menu 5</a></li>
+    </div>
+
+    <form action="">
+        <label for="username">username</label>
+        <input type="text" id="username">
+        <label for="email">email</label>
+        <input type="text" id="email">
+        <label for="password">password</label>
+        <input type="password" id="password">
+    </form>
+    <script>
+        /* 
+          Cho tất cả menu cấp 1 màu đỏ
+          -----------------
+          In vào giá trị của input "Đã có label" nếu nó có label phía trên	
+        */
+        
+        $(document).ready(function(){
+          $("#main-menu > li > a").css("color", "red");
+          $("label+input").val("Đã có label")
+        })
+    </script>
+</body>
+</html>

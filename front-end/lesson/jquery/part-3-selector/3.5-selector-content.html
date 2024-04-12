@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Selector content</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <p>Hello World</p>
+    <p>Hello Unitop</p>
+    <p>Xin chào Unitop</p>
+
+    <p></p>
+    <div></div>
+    <span></span>
+
+    <p><span>P chứa span</span></p>
+    <p>Không chứa thẻ nào</p>
+    <script>
+        $(document).ready(function () {
+            // begin
+            $("p:contains(\"Hello\")").css('color', 'red');
+            $(":empty").css({
+                'border': '1px solid red', 
+                'padding': '10px' 
+            });
+            $("p:has(span)").css('color', 'yellow');
+            $(":parent").css('color', 'blue');
+            // end
+        })
+
+    </script>
+</body>
+
+</html>
