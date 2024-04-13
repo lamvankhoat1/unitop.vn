@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiệu ứng Slide</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <style>
+        #box {
+            padding: 10px;
+            width: 200px;
+            height: 100px;
+            background-color: #2980b9;
+        }
+    </style>
+    <a href="" class="show">Slide Up</a> <a href="" class="hide">Slide Down</a> <a href="" class="toggle">Slide Toggle</a>
+    <div id="box"></div>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro sint fugit nisi odio. Quasi itaque mollitia officiis a facilis nulla consequatur quos tenetur, repudiandae eos! Provident, corporis. Illo eaque quod optio ullam cupiditate. Quis praesentium aut modi at ipsum optio in alias aliquid tempore consequuntur eaque blanditiis totam sapiente magni quas, voluptas exercitationem adipisci assumenda obcaecati perferendis libero quod voluptates ea cumque! Distinctio, dicta autem quos aperiam non eius facere consectetur optio. Ullam, deleniti magni! Harum, culpa aut dolorum rem tempore similique vel tenetur necessitatibus assumenda, corrupti aperiam hic facilis reiciendis obcaecati magni doloremque omnis veritatis cum libero, quam enim possimus impedit? Est minima cumque eius consequuntur laborum sed repellat, velit ut. Iure non cumque et voluptate nostrum voluptates porro, alias possimus tenetur sint quis quos, doloribus officia ut repudiandae iusto esse similique necessitatibus veniam. Quod quaerat consectetur quisquam velit adipisci! Expedita molestiae harum delectus voluptate sint rerum omnis nisi sunt tenetur eligendi doloribus doloremque fuga blanditiis quia sed, hic fugit corporis, tempore ex odio eius obcaecati repellat! Minima cum eum repellat voluptatem distinctio explicabo nemo soluta dignissimos, adipisci officia eveniet odio nisi? Amet placeat ipsum est consequuntur recusandae, possimus debitis! Dolor, corrupti et magnam, nemo doloribus libero sed, eius distinctio cupiditate eum possimus est! Nostrum corporis deleniti fugiat ipsum sint doloribus eaque vel quas quidem velit vitae possimus animi sequi in sunt aperiam ab reiciendis, voluptas non molestias facere porro. Rem fuga quas voluptate labore similique earum deserunt nisi, error facere quibusdam in, aliquam maiores tenetur at nesciunt dolore vel fugiat sint obcaecati consequuntur ab quia dignissimos distinctio! Provident sunt id ipsam porro consequuntur neque quis doloremque, aspernatur, laborum error sint, praesentium facilis accusamus. Ex, quisquam dolore excepturi esse dolor ipsum aliquid rem accusamus in harum vero architecto! Nulla sed veritatis, quisquam provident nobis quae possimus, iste laboriosam eos suscipit magni neque necessitatibus. Quidem dignissimos libero tempora rerum nobis. Quo, sit voluptatibus? Numquam amet quos explicabo voluptate eveniet voluptatum consectetur. Dignissimos cum aliquam dicta quos provident, autem obcaecati tempore nesciunt quasi tenetur laudantium libero exercitationem? Tempore obcaecati iste rerum provident asperiores tenetur corporis corrupti deserunt eveniet sit est distinctio assumenda similique eos cumque nulla nemo ducimus sint sunt laborum, alias voluptatibus quidem. Accusantium, ab numquam, beatae alias ducimus, voluptatibus asperiores iusto nesciunt suscipit omnis deleniti dolorum nihil iste fugiat! Autem excepturi harum natus aliquid sunt cum omnis est odit accusamus, laboriosam in porro obcaecati veritatis at vitae voluptas blanditiis rem nesciunt aliquam sapiente praesentium! Nulla nisi, repellat voluptatem sequi alias ad, odio quas eum quo hic suscipit cum vero illo ducimus adipisci ea doloribus qui sunt! Possimus mollitia exercitationem labore neque alias officiis quisquam fugit! Quidem quas deleniti voluptate cum nihil quo assumenda. Possimus facilis voluptatum nesciunt ratione iusto illo, aliquid eos quidem consequatur, officia molestiae eveniet voluptatibus repellat in porro praesentium dolorem, omnis atque sapiente mollitia tempore rerum alias! At quos ea porro eum molestiae temporibus eligendi sed odit tempore cumque possimus, hic praesentium soluta corporis nesciunt adipisci ad. Tempora cupiditate laborum doloremque adipisci dolor nam voluptatum cumque.</p>
+    <script>
+        $(document).ready(function(){
+          $(".show").click(function(){
+            $("#box").slideUp(1000);
+            return false
+          })
+          $(".hide").click(function() {
+            $("#box").slideDown(1000);
+            return false;
+          })
+          $(".toggle").click(function() {
+            $("#box").slideToggle(1000);
+            return false;
+          })
+        })
+    </script>
+</body>
+</html>

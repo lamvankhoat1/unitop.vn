@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoạt cảnh trong jquery</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <style>
+        #wrapper {
+            position: relative;
+        }
+        #box {
+            width: 100px;
+            height: 50px;
+            margin: 20px;
+            background-color: #333;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+        }
+    </style>
+    <a href="#" id="animate">animate</a>
+    <div id="wrapper">
+        <div id="box"></div>
+    </div>
+    <script>
+        $(document).ready(function(){
+          $("#animate").click(function(){
+            $("#box").animate({
+                top: '30px',
+                left: '10px',
+                background: 'yellow'
+            }, 1000)
+          })
+        })
+    </script>
+</body>
+</html>

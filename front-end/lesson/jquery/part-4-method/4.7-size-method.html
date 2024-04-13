@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhóm phương thức kích thước</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <style>
+        .box {
+            width: 200px;
+            min-height: 100px;
+            padding: 10px 20px;
+            border: 1px solid red;
+            margin: 10px;
+            float: left;
+        }
+    </style>
+    <!-- html box -->
+    <div class="box" id="box-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, fuga nesciunt. Iusto officiis, impedit laborum incidunt molestiae in ipsum deserunt corrupti, sint hic facilis vel quae dignissimos architecto, saepe odio iure tempora debitis quisquam? Ullam, quae facilis? Aperiam rem voluptas aliquam enim in ullam libero vel, praesentium quis eum ipsam quam reprehenderit, recusandae, voluptatum modi sequi laborum minima. Alias, temporibus aliquam rem consequatur voluptate ullam necessitatibus repudiandae omnis ad, similique praesentium id molestias dolor impedit harum earum illo consequuntur excepturi eum laudantium ut reiciendis fugiat exercitationem? Dolor dolorum ad rerum repellat libero vitae non impedit voluptatum aliquam asperiores, sed sit quod eaque aliquid autem voluptatem accusamus. Magni iure natus blanditiis excepturi quam cupiditate dolorum asperiores molestias itaque, distinctio culpa ratione, minus perferendis officiis aperiam? Nesciunt, vitae cumque beatae velit ut asperiores? Eligendi esse nisi qui accusamus tenetur aspernatur maxime reiciendis unde suscipit iure necessitatibus ullam repudiandae voluptas animi velit quibusdam ipsa nesciunt pariatur et, officia quod cum sit praesentium blanditiis? Minima, odit laudantium quos officiis, suscipit dolorum atque mollitia labore, minus sequi itaque. Vel aut vitae praesentium rerum repellendus quos alias est et veniam delectus neque, nulla ducimus, tenetur consequuntur maxime ullam porro architecto aliquam ipsam omnis ea. At, ipsum! Deserunt in similique repellendus eum quo delectus quis iusto iure asperiores excepturi debitis, voluptas eveniet, obcaecati sed? Velit ex voluptates repellat asperiores quas molestias recusandae libero facilis optio, eaque a, maxime quibusdam quasi quaerat voluptas ipsum, temporibus consequatur nihil. Voluptas excepturi libero repellendus architecto similique, corporis cum dicta, natus vel consequatur, eum in. Nulla accusantium iste rem exercitationem, perferendis dolorum quos consequatur aperiam culpa unde ab vitae! Necessitatibus laboriosam nemo qui, soluta pariatur id! Dolore repudiandae voluptatum, deserunt quos pariatur itaque vitae sapiente maiores veritatis sequi impedit culpa dicta unde deleniti nulla natus nisi? Voluptate, architecto! Sint, obcaecati? Adipisci ratione assumenda, doloribus reprehenderit error voluptas hic dignissimos aut animi ducimus voluptate fugiat iste esse expedita ut mollitia inventore impedit, dolorum odit ullam est. Praesentium soluta eaque minus! Alias nemo tempore maiores sint blanditiis in cupiditate architecto quia optio. Tenetur, delectus dolorum deserunt odio qui doloribus sed molestias quisquam at nemo fugiat aut modi dolores ipsam quae quod nobis! Ullam sit aspernatur laudantium, error cumque obcaecati odio voluptates neque quae ducimus necessitatibus hic vitae eum, quis expedita. Officiis explicabo consectetur, blanditiis minus ex eligendi cumque laudantium corrupti numquam magni, quas expedita! Atque repellendus assumenda quod quasi laboriosam nemo dolorum facere eius.</div>
+    <div class="box" id="box-2">Box 2</div>
+    <div class="box" id="box-3">Box 3</div>
+    <script>
+        $(document).ready(function () {
+            //   innerWidth: 200, 20, 20 = 240
+            //   outerWidth: 240, 2 = 242
+            //   innerHeight: 100, 10, 10 = 120
+            //   outerHeight: 120, 2 = 122
+            let box_1 = $("#box-1");
+            console.log(box_1.width(), box_1.innerWidth(), box_1.outerWidth());
+            console.log(box_1.height(), box_1.innerHeight(), box_1.outerHeight());
+
+            $(".box").height(box_1.height());
+        })
+    </script>
+</body>
+
+</html>
