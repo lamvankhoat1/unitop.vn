@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Change</title>
+</head>
+<body>
+    <style>
+        form * {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+    <form action="">
+        <label for="form-input">Form Input</label>
+        <input type="text" name="input" id="form-input">
+        <label for="form-select">Form Select</label>
+        <select name="select" id="form-select">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+        <label for="form-textarea">Form Textarea</label>
+        <textarea id="form-textarea" name="textarea"></textarea>
+    </form>
+    <a href="#" id="other">Other</a>
+    <script>
+        $(document).ready(function(){
+            $("#form-input").change(function(){
+              console.log($(this).val());
+            })
+            $("#form-select").change(function(){
+              console.log($(this).val());
+            })
+            $("#form-textarea").change(function(){
+              console.log($(this).val());
+            })
+            $("#other").click(function(){
+              $("#form-select").change();
+              return false;
+            })
+        })
+    </script>
+</body>
+</html>

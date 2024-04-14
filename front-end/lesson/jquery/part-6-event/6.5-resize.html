@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Resize</title>
+</head>
+<body>
+    <p id="width-window">Độ rộng của trình duyệt: <span class="result"></span></p>
+    <script>
+        $(document).ready(function(){
+          let widthWindowElement = $("#width-window .result");
+          widthWindowElement.text($(window).width());
+          $(window).resize(function(){
+            widthWindowElement.text($(window).width());
+          })
+        })
+    </script>
+</body>
+</html>

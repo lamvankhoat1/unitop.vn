@@ -1,0 +1,12 @@
+.d-flex {
+    display: flex;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.opacity {
+    opacity: 0.5;
+}

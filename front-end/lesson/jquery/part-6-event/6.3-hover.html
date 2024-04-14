@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Hover</title>
+</head>
+<body>
+    <style>
+        #box, #box-1 {
+            --side: 100px;
+            width: var(--side);
+            height: var(--side);
+            background-color: orange;
+            margin-bottom: 5px;
+        }
+    </style>
+    <div id="box">hover in, hover out</div>
+    <div id="box-1" style="background-color: tomato;">hover in-out</div>
+    <script>
+        $(document).ready(function(){
+          $("#box").hover(hoverIn, hoverOut);
+          $("#box-1").hover(hoverInOut);
+        })
+
+        function hoverIn(){
+            console.log("In")
+        }
+
+        function hoverOut(){
+            console.log("Out");
+        }
+
+        function hoverInOut(){
+            console.log("In - Out");
+        }
+    </script>
+</body>
+</html>
