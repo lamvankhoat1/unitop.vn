@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập: Responsive tiêu đề website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- 
+            22px	
+            min-width: 576 => 30px	
+            min-width: 768 => 35px	
+            min-width: 922 => 42px	
+        -->
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        #wrapper {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+        }
+
+        h1 {
+            font-size: 22px;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            text-align: center;
+        }
+
+
+
+        /* X-Small devices (portrait phones, less than 576px) */
+        /* No media query for `xs` since this is the default in Bootstrap */
+
+        /* Small devices (landscape phones, 576px and up) */
+        @media (min-width: 576px) {
+            h1 {
+                font-size: 30px;
+            }
+        }
+
+        /* Medium devices (tablets, 768px and up) */
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 35px;
+            }
+        }
+
+        /* Large devices (desktops, 992px and up) */
+        @media (min-width: 992px) {
+            h1 {
+                font-size: 42px;
+            }
+        }
+
+        /* X-Large devices (large desktops, 1200px and up) */
+        @media (min-width: 1200px) {}
+
+        /* XX-Large devices (larger desktops, 1400px and up) */
+        @media (min-width: 1400px) {}
+    </style>
+    <div id="wrapper">
+        <h1>RESPONSIVE MASTERY</h1>
+    </div>
+</body>
+
+</html>
