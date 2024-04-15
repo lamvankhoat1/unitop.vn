@@ -83,6 +83,7 @@
         background-color: var(--main-color);
         left: 0;
         right: -20px;
+        padding-left: 5px;
     }
 
     nav li:hover > ul.sub-menu {
