@@ -2,6 +2,11 @@ header {
     --main-color: #2c2c32;
     background-color: var(--main-color);
     padding: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 64px; /* tránh cho nav lấp content */
 }
 
 /* ==== WRAPPER LOGO ====  */
@@ -44,7 +49,7 @@ header {
     color: white;
 }
 
-/* ==== NAV BAR ====  */
+/* ==== NAV BAR MOBILE ====  */
 nav {
     background-color: var(--main-color);
 }
@@ -53,11 +58,17 @@ nav#pc, #search-download {
     display: none;
 }
 
-nav ul.menu-header a {
+nav#mobile {
+    position: fixed;
+    left: 0;
+    right: 0;
+}
+nav ul.menu-header li a {
     color: white;
     display: block;
     padding: 10px 12px;
     text-decoration: none;
     cursor: pointer;
+    transition: all 0.2s;
 }
 
