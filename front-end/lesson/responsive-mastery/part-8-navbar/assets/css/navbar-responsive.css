@@ -48,14 +48,13 @@
         color: #9d9d9d;
         display: block;
         align-self: center;
+        padding: 8px;
+        padding-right: 15px;
+        height: 100%;
     }
 
     #search-download a.search:hover {
         color: white;
-    }
-
-    #search-download a.search {
-        padding: 10px;
     }
 
     #search-download a.download {
