@@ -59,10 +59,14 @@
 
     #search-download a.download {
         height: 100%;
-        background-color: #0072be;
+        background-color: #0186df;
         display: flex;
         padding: 8px 15px ;
         align-items: center;
+    }
+
+    #search-download a.download:hover {
+        background-color: #0072be;
     }
 
     #search-download a.download i {
