@@ -67,6 +67,10 @@ nav#mobile {
     left: 0;
     right: 0;
 }
+
+nav ul.menu-header > li {
+    border-bottom: 1px solid rgb(29, 29, 29);
+}
 nav ul.menu-header li a {
     color: white;
     display: block;
@@ -88,7 +92,7 @@ ul.sub-menu {
     padding-left: 20px;
     background-color: #434343;
     flex-basis: 100%;
-
+    display: none;
 }
 
 ul li i.fa-chevron-down {
