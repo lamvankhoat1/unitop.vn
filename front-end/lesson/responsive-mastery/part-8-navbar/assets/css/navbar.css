@@ -54,6 +54,10 @@ nav {
     background-color: var(--main-color);
 }
 
+nav li {
+    position: relative;
+}
+
 nav#pc, #search-download {
     display: none;
 }
@@ -70,5 +74,31 @@ nav ul.menu-header li a {
     text-decoration: none;
     cursor: pointer;
     transition: all 0.2s;
+}
+
+/* ==== Sub Menu ====  */
+ul li:has(i.fa-chevron-down) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul.sub-menu {
+    padding-left: 20px;
+    background-color: #434343;
+    flex-basis: 100%;
+
+}
+
+ul li i.fa-chevron-down {
+    color: white;
+    padding: 5px 25px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+ul li i.fa-chevron-down.rotate {
+    transform: rotate(180deg);
 }
 
