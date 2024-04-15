@@ -74,7 +74,12 @@
         padding-right: 5px;
     }
 
+    nav ul.menu-header > li {
+        border-bottom: none;
+    }
+
     /* ==== Sub Menu ====  */
+    
     ul.sub-menu {
         display: none; /* default */
     }
