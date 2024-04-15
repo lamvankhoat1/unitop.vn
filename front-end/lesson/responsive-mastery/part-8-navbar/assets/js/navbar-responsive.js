@@ -12,7 +12,7 @@ $(document).ready(function () {
     })
     // sub menu
     $("ul li i.fa-chevron-down").click(function () {
-        $(".sub-menu").slideToggle(300);
-        $("ul li i.fa-chevron-down").toggleClass("rotate");
+        $(this).parent().children(".sub-menu").slideToggle(300);
+        $(this).toggleClass("rotate");
     })
 })
