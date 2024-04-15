@@ -1,0 +1,83 @@
+/* X-Small devices (portrait phones, less than 576px) */
+/* No media query for `xs` since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    #wp-logo button#bar-button-toggle {
+        display: none;
+    }
+
+    nav#mobile {
+        display: none;
+    }
+
+    /* NAV PC */
+    nav#pc, #search-download {
+        display: flex;
+    }
+
+    nav ul.menu-header {
+        display: flex;
+    }
+
+    nav ul.menu-header li a {
+        color: #9d9d9d;
+    }
+
+    nav ul.menu-header li:hover a {
+        color: white;
+    }
+
+    #search-download {
+        padding: 0 15px;
+        color: white;
+        cursor: pointer;
+    }
+
+    #search-download a.search {
+        color: #9d9d9d;
+        display: block;
+        align-self: center;
+    }
+
+    #search-download a.search:hover {
+        color: white;
+    }
+
+    #search-download a.search {
+        padding: 10px;
+    }
+
+    #search-download a.download {
+        height: 100%;
+        background-color: #0072be;
+        display: flex;
+        padding: 8px 15px ;
+        align-items: center;
+    }
+
+    #search-download a.download i {
+        padding-right: 5px;
+    }
+
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+    
+}

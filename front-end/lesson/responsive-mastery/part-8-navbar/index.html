@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập: Navbar Responsive</title>
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/navbar-responsive.css">
+    <!-- font -->
+    <link rel="stylesheet" href="assets/fontawesome/css/all.css">
+    <!-- js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <div id="wp-logo" class="d-flex">
+                <div id="logo" class="d-flex">
+                    <a href="#" class="logo-img"><img src="assets/images/logo-visual-studio-code.png"
+                            alt="Visual Studio Code"></a>
+                    <a href="#" class="logo-label">Visual Studio Code</a>
+                </div>
+                <!-- PC -->
+                <nav id="pc">
+                    <ul class="menu-header">
+                        <li><a href="#">Docs</a></li>
+                        <li><a href="#">Updates</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">API</a></li>
+                        <li><a href="#">Extensions</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Learn</a></li>
+                        <li><a href="#">Search</a></li>
+                    </ul>
+                </nav>
+                <div id="search-download">
+                    <a href="" class="search"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a class="download"><i class="fa-solid fa-download"></i><span>DOWNLOAD</span></a>
+                </div>
+                <!-- END PC -->
+                <button id="bar-button-toggle"><i class="fa-solid fa-bars"></i></button>
+            </div>
+            <nav id="mobile">
+                <ul class="menu-header">
+                    <li><a href="#">Docs</a></li>
+                    <li><a href="#">Updates</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">API</a></li>
+                    <li><a href="#">Extensions</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Learn</a></li>
+                    <li><a href="#">Search</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <script>
+            $(document).ready(function () {
+                $("nav#mobile").hide(); // default;
+                $("#bar-button-toggle").click(function () {
+                    $("nav#mobile").stop().slideToggle(300)
+                })
+                $(window).resize(function () {
+                    $("nav#mobile").slideUp()
+                })
+            })
+        </script>
+    </div>
+</body>
+
+</html>

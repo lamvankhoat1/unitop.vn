@@ -1,0 +1,63 @@
+header {
+    --main-color: #2c2c32;
+    background-color: var(--main-color);
+    padding: 15px;
+}
+
+/* ==== WRAPPER LOGO ====  */
+
+#wp-logo {
+    justify-content: space-between;
+    align-items: center;
+}
+
+#wp-logo #logo a.logo-img {
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+
+#wp-logo #logo a.logo-label {
+    display: block;
+    padding-left: 10px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+#wp-logo button#bar-button-toggle  {
+    background-color: var(--main-color);
+    padding: 5px 10px;
+    border-radius: 10%;
+    border: none;
+    outline: none;
+    display: block;
+}
+
+#wp-logo button#bar-button-toggle:hover {
+    background-color: #0072be;
+
+}
+
+#wp-logo button#bar-button-toggle i {
+    font-size: 20px;
+    color: white;
+}
+
+/* ==== NAV BAR ====  */
+nav {
+    background-color: var(--main-color);
+}
+
+nav#pc, #search-download {
+    display: none;
+}
+
+nav ul.menu-header a {
+    color: white;
+    display: block;
+    padding: 10px 12px;
+    text-decoration: none;
+    cursor: pointer;
+}
+

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ẩn hiện trong responsive</title>
+</head>
+
+<body>
+    <style>
+        #wrapper {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        [class$="-info"] {
+            padding: 5px;
+            margin-bottom: 5px;
+        }
+
+        .main-info {
+            background-color: #ffd661;
+        }
+
+        .sub-info {
+            display: none;
+            background-color: #d4d4d4;
+        }
+
+        /* X-Small devices (portrait phones, less than 576px) */
+        /* No media query for `xs` since this is the default in Bootstrap */
+
+        /* Small devices (landscape phones, 576px and up) */
+        @media (min-width: 576px) {}
+
+        /* Medium devices (tablets, 768px and up) */
+        @media (min-width: 768px) {
+            [class$="-info"] {
+                padding: 20px 10px;
+                margin-bottom: 10px;
+            }
+
+            .sub-info {
+                display: block;
+            }
+        }
+
+        /* Large devices (desktops, 992px and up) */
+        @media (min-width: 992px) {}
+
+        /* X-Large devices (large desktops, 1200px and up) */
+        @media (min-width: 1200px) {}
+
+        /* XX-Large devices (larger desktops, 1400px and up) */
+        @media (min-width: 1400px) {}
+    </style>
+    <div id="wrapper">
+        <div class="main-info">Thông tin chính</div>
+        <div class="sub-info">Thông tin phụ</div>
+        <div class="main-info">Thông tin chính</div>
+    </div>
+</body>
+
+</html>
