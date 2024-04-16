@@ -13,6 +13,6 @@ $(document).ready(function () {
     // sub menu
     $("ul li i.fa-chevron-down").click(function () {
         $(this).parent().children(".sub-menu").slideToggle(300);
-        $(this).toggleClass("rotate");
+        $(this).toggleClass("active");
     })
 })

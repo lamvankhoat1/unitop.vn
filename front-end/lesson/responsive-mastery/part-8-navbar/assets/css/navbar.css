@@ -71,13 +71,17 @@ nav#mobile {
 nav ul.menu-header > li {
     border-bottom: 1px solid rgb(29, 29, 29);
 }
-nav ul.menu-header li a {
+nav ul.menu-header > li a {
     color: white;
     display: block;
     padding: 10px 12px;
     text-decoration: none;
     cursor: pointer;
     transition: all 0.2s;
+}
+
+nav ul.menu-header > li:hover {
+    background-color: #0f0f0f;
 }
 
 /* ==== Sub Menu ====  */
@@ -95,6 +99,10 @@ ul.sub-menu {
     display: none;
 }
 
+ul.sub-menu li:hover a{
+    text-decoration: underline;
+}
+
 ul li i.fa-chevron-down {
     color: white;
     padding: 5px 25px;
@@ -102,7 +110,7 @@ ul li i.fa-chevron-down {
     transition: all 0.3s;
 }
 
-ul li i.fa-chevron-down.rotate {
+ul li i.fa-chevron-down.active {
     transform: rotate(180deg);
 }
 
