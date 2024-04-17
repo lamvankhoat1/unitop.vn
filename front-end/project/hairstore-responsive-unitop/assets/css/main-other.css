@@ -153,7 +153,7 @@
 }
 
 .gift-list li:last-child {
-    margin: 0;
+    margin-right: 0;
 }
 
 .gift-list li .title {
@@ -175,6 +175,8 @@
 .gift-list li .description {
     color: #484848;
     text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
     transition: all 0.5s;
 }
 
@@ -199,6 +201,11 @@
 .gift-list li:hover button {
     color: #441f06;
     background-color: white;
+}
+
+.gift-list li .thumb {
+    height: 100px;
+    width: 100%;
 }
 
 /* X-Small devices (portrait phones, less than 576px) */
@@ -234,6 +241,10 @@
         font-size: 14px;
         margin-top: 28px;
         margin-bottom: 28px;
+    }
+
+    .gift-list li .thumb {
+        height: 200px;
     }
 }
 
