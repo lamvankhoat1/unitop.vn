@@ -1,0 +1,142 @@
+header {
+    position: relative;
+    background-color: #1d1d1d;
+    /* mobile */
+    padding: 10px 0;
+}
+
+a#logo {
+    display: block;
+    width: 100%;
+    /* mobile */
+    text-align: left;
+    padding-left: 20px;
+}
+
+a#make-an-appointment {
+    display: block;
+    position: absolute;
+    background: #1d1d1d;
+    color: #ffffff;
+    border: 2px solid #982e00;
+    margin-right: 25px;
+    padding: 2px 8px;
+    font-size: 12px;
+    border-radius: 5px;
+    /* mobile */
+    right: 50px;
+    top: 35px;
+}
+
+a#menu-bar {
+    /* mobile */
+    display: block;
+    padding: 5px 15px;
+    position: absolute;
+    top: 30px;
+    right: 25px;
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+    transition: all 0.3s;
+    border-radius: 5px;
+
+}
+
+a#menu-bar:hover {
+    background-color: red;
+}
+
+nav {
+    background-color: #444444;
+    /* mobile */
+    padding: 0;
+    display: none;
+}
+
+nav ul {
+    justify-content: space-between;
+    /* mobile */
+    flex-direction: column;
+}
+
+
+nav li a {
+    display: block;
+    color: white;
+    font-size: 12px;
+    text-transform: uppercase;
+    transition: all 0.2s;
+    /* mobile */
+    border: 1px solid transparent;
+    padding: 10px 11px;
+    border-radius: 0px;
+    border-bottom: 1px solid black;
+}
+
+nav li:hover a {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    /* mobile */
+    border: 1px solid transparent;
+
+}
+
+/* ==== RESPONSIVE ====  */
+/* X-Small devices (portrait phones, less than 576px) */
+/* No media query for `xs` since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    header {
+        padding: 30px 0;
+    }
+
+    a#logo {
+        text-align: center;
+        padding-left: 0px
+    }
+
+    a#make-an-appointment {
+        right: 0px;
+        top: 53px;
+    }
+
+    a#menu-bar {
+        display: none;
+    }
+
+    nav {
+        padding: 23px 0;
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: row;
+    }
+
+    nav li a {
+        border-radius: 10px;
+        border: 2px solid transparent;
+        padding: 3px 11px;
+        border-bottom: 2px solid transparent;
+    }
+
+    nav li:hover a {
+        border: 2px solid white;
+    }
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {}

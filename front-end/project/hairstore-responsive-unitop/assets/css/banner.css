@@ -1,0 +1,86 @@
+#banner {
+    background: url("../images/banner.png");
+    background-size: cover;
+    position: relative;
+    /* mobile */
+    height: 50vh;
+
+}
+
+#banner * {
+    left: 100px;
+    /* mobile */
+    left: 3vw;
+    position: absolute;
+}
+
+#banner img {
+    top: 110px;
+    max-height: 40%;
+}
+
+#banner span[content='HAIR IS'] {
+    color: #430200;
+    /* mobile */
+    font-size: 30px;
+    top: 50%;
+}
+
+#banner span[content='A EMOTIONS'] {
+    font-weight: bold;
+    color: #430200;
+    /* mobile */
+    top: 60%;
+    font-size: 33px;
+}
+
+#banner button {
+    outline: none;
+    background-color: #430200;
+    color: white;
+    border: 1px solid #d16e5c;
+    border-radius: 40px;
+    /* mobile */
+    top: 80%;
+    font-size: 12px;
+    padding: 8px 16px;
+}
+
+/* ==== RESPONSIVE ====  */
+/* X-Small devices (portrait phones, less than 576px) */
+/* No media query for `xs` since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    #banner {
+        height: 577px;
+    }
+
+    #banner span[content='HAIR IS'] {
+        font-size: 40px;
+        top: 176px;
+    }
+
+    #banner span[content='A EMOTIONS'] {
+        font-size: 45px;
+        top: 222px;
+    }
+
+    #banner button {
+        font-size: 18px;
+        padding: 16px 32px;
+        top: 360px
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/banner.css">
+    <link rel="stylesheet" href="assets/css/main-other.css">
+    <!-- font -->
+    <link rel="stylesheet" href="assets/fontawesome/css/all.css">
+    <!-- open sans font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <!-- cài đặt jquery trước owl carousel thì mới chạy -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="plugins/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="plugins/owl-carousel/owl.theme.default.min.css">
+    <script src="plugins/owl-carousel/owl.carousel.min.js"></script>
+
+    <title>HAIRSTORE - UNITOP</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="container">
+                <a href="#" id="logo"><img src="assets/images/logo.png" alt="Logo"></a>
+                <a href="#" id="make-an-appointment">ĐẶT HẸN</a>
+                <a href="#" id="menu-bar"><i class="fa-solid fa-bars"></i></a>
+            </div>
+        </header>
+        <nav>
+            <ul class="d-flex container">
+                <li><a href="#">TRANG CHỦ</a></li>
+                <li><a href="#">GIỚI THIỆU</a></li>
+                <li><a href="#">ĐÀO TẠO</a></li>
+                <li><a href="#">DỊCH VỤ</a></li>
+                <li><a href="#">GALLERY</a></li>
+                <li><a href="#">TIN TỨC</a></li>
+                <li><a href="#">TƯ VẤN</a></li>
+                <li><a href="#">LIÊN HỆ</a></li>
+            </ul>
+        </nav>
+        <div id="banner">
+            <img src="assets/images/mai-trang.png" alt="mai trang text">
+            <span content="HAIR IS">HAIR IS</span>
+            <span content="A EMOTIONS">A EMOTIONS</span>
+            <button>Bộ sưu tập</button>
+        </div>
+        <div id="voucher" class="d-flex container">
+            <p class="voucher-welcome">Chào mừng tới MaiTrang Salon hair design</p>
+            <h3 class="voucher-heading">Our Service</h3>
+            <ul class="voucher-list d-flex">
+                <li>
+                    <a class="voucher-thumb" href="#"><img src="assets/images/service-1.png" alt="service 1"></a>
+                    <a href="#" class="voucher-service-name">Cắt tóc</a>
+                </li>
+                <li>
+                    <a class="voucher-thumb" href="#"><img src="assets/images/service-2.png" alt="service 2"></a>
+                    <a href="#" class="voucher-service-name">Nối tóc</a>
+                </li>
+                <li>
+                    <a class="voucher-thumb" href="#"><img src="assets/images/service-3.png" alt="service 3"></a>
+                    <a href="#" class="voucher-service-name">Làm mi</a>
+                </li>
+            </ul>
+        </div>
+        <div id="wp-gift">
+            <div id="gift" class="d-flex container">
+                <div class="gift-heading">Nhận phiếu quà tặng</div>
+                <ul class="gift-list d-flex">
+                    <li>
+                        <div class="title">Giảm 200.000đ</div>
+                        <img src="assets/images/voucher-1.png" alt="" class="thumb">
+                        <div class="description">Sử dụng lần thứ 3 dịch vụ của Salon</div>
+                        <button>Nhận ngay</button>
+                    </li>
+                    <li>
+                        <div class="title">-15% học phí</div>
+                        <img src="assets/images/voucher-2.png" alt="" class="thumb">
+                        <div class="description">Áp dụng với học viên khóa nâng cao</div>
+                        <button>Nhận ngay</button>
+                    </li>
+                    <li>
+                        <div class="title">Tư vấn miễn phí</div>
+                        <img src="assets/images/voucher-3.png" alt="" class="thumb">
+                        <div class="description">Bạn muốn có một phong cách mới?</div>
+                        <button>Nhận ngay</button>
+                    </li>
+                </ul>
+            </div>
+            <div id="feedback">
+                
+            </div>
+        </div>
+
+
+        <script>
+            $(document).ready(function () {
+                $("#menu-bar").click(function () {
+                    $("nav").slideToggle(500);
+                })
+
+                $(window).resize(function(){
+                    $("nav").attr("style", ""); // tránh bị mất nav bar khi slide up ở mobile sau đó resize về pc
+                })
+            })
+        </script>
+</body>
+
+</html>
