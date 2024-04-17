@@ -204,8 +204,9 @@
 }
 
 .gift-list li .thumb {
-    height: 100px;
+    height: 126px;
     width: 100%;
+    background-position: bottom;
 }
 
 /* X-Small devices (portrait phones, less than 576px) */
