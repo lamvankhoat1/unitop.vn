@@ -375,3 +375,139 @@
 
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {}
+
+
+#news {
+    padding: 20px 0;
+    flex-direction: column;
+}
+
+.news-heading {
+    text-align: center;
+    color: #050505;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.news-item {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.news-item:last-child {
+    margin-top: 0;
+}
+
+.news-detail * {
+    display: block;
+}
+
+p.news-excerp {
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+a.news-thumb {
+    display: block;
+    flex-basis: 35%;
+    padding-right: 6px
+}
+
+a.news-thumb img {
+    width: 100%;
+}
+
+.news-detail {
+    flex-basis: 65%;
+    padding-left: 6px;
+}
+
+.news-title {
+    font-size: 20.29px;
+    color: black;
+    padding-bottom: 5px;
+    transition: all 0.5s;
+}
+
+.news-title:hover {
+    color: red;
+    text-decoration: none;
+}
+
+.news-public {
+    font-size: 14.61px;
+    color: #393939;
+    font-weight: 300;
+    padding-bottom: 8px;
+}
+
+.news-excerp {
+    font-size: 14px;
+    color: #616161;
+    font-weight: 300;
+
+}
+
+/* X-Small devices (portrait phones, less than 576px) */
+/* No media query for `xs` since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    #news {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-top: 59px;
+        padding-bottom: 75px;
+    }
+
+    .news-list, .news-heading  {
+        flex-basis: 100%;
+    }
+
+    .news-list li {
+        flex-wrap: nowrap;
+    }
+
+    a.news-thumb {
+        display: block;
+        flex-basis: 260px;
+        padding-right: 12px
+    }
+    
+    .news-detail {
+        flex-basis: 1;
+        padding-left: 12px;
+    }
+
+    .news-item {
+        padding-bottom: 22px;
+    }
+
+    .news-title {
+        padding-bottom: 12px;
+    }
+    .news-public {
+        padding-bottom: 18px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+    
+}
