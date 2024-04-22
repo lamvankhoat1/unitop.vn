@@ -1,3 +1,3 @@
-button.buy, .product {
-    transition: all 0.5s;
+.product {
+    transition: all 0.3s;
 }
