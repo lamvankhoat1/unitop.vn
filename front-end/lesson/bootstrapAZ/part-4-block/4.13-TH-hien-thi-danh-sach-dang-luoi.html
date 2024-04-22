@@ -82,13 +82,13 @@
                         </div>`;
 
             })
-            $("#product-list").append(renderHTML);
+            $("#product-list").append(renderHTML.join(""));
         }
 
         $(".product").hover(function hoverIn() {
-            $(this).addClass("shadow");
+            $(this).addClass("border-secondary");
         }, function hoverOut() {
-            $(this).removeClass("shadow");
+            $(this).removeClass("border-secondary");
         })
     </script>
 </body>
