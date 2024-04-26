@@ -1,0 +1,86 @@
+:root {
+    font-size: 14px;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+
+/* ==== HEADER ====  */
+header .infomation {
+    border-color: #363636 !important;
+}
+
+.work-time,
+.email,
+.phone {
+    color: #eee;
+}
+
+.search,
+.cart {
+    font-size: 18px;
+}
+
+.cart>.number {
+    border-radius: 50%;
+    background-color: red;
+    font-size: 14px;
+    top: -12px;
+    right: -20px;
+}
+
+.nav-item.bag .dropdown-menu {
+    font-family: "Roboto Condensed", sans-serif;
+    top: 175%;
+    left: -8%;
+    z-index: -1;
+    padding: 17px 76px 27px 27px;
+}
+
+.dropdown.show>a {
+    color: #e2524a !important
+}
+
+.dropdown *:hover {
+    color: #e2524a !important;
+    background-color: transparent !important;
+}
+
+.dropdown-item:active,
+.dropdown-item:focus {
+    color: #e2524a !important;
+    background-color: transparent !important;
+}
+
+/* ==== BANNER LIST ====  */
+#banner-list {
+    height: 717px;
+}
+
+#banner-list .carousel-item {
+    background-size: cover;
+    position: relative;
+    left: 0;
+    right: 0;
+}
+
+/* ==== SUPPORT ====  */
+#support {
+    margin-top: 80px;
+    margin-bottom: 160px;
+
+}
+
+.support-inner {
+    background-color: #f4f4f4;
+}
+
+.support-text {
+    font-size: 16px;
+}
+
+.support-icon {
+    font-size: 48px;
+}

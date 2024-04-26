@@ -1,3 +1,0 @@
-- Xây dựng cấu trúc html
-- Xử lý bằng javascript
-- Copy và dán vào để thực hành
