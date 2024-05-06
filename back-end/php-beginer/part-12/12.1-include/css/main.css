@@ -1,0 +1,25 @@
+#wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+header, footer {
+    background-color: #606060;
+    color: white;
+    text-align: center;
+}
+
+header {
+    padding: 20px;
+    font-size: 20px;
+}
+
+#content {
+    min-height: 500px;
+    padding: 15px 20px;
+}
+
+footer {
+    padding: 15px 20px;
+    font-size: 15px;
+}

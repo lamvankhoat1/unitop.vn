@@ -30,11 +30,18 @@
     ?>
     <form action="" method="post">
         <label>
-            <input type="radio" name="gender" value="male">Nam
+            <input type="radio" name="gender" value="male" <?php if (!empty($gender) && $gender == 'male') {
+              echo 'checked="checked"';
+            } ?>>Nam
         </label>
         <label>
-            <input type="radio" name="gender" value="female">Nữ
+            <input type="radio" name="gender" value="female" <?php if (!empty($gender) && $gender == 'female') {
+              echo 'checked="checked"';
+            } ?>>Nữ
         </label>
+        <?php if (!empty($error['gender'])) {
+          echo "<p style=\"color: red\">{$error['gender']}</p>";
+        }?>
         <input type="submit" value="Đăng ký" name="btn_reg">
     </form>
 </body>
