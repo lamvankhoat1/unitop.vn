@@ -31,6 +31,19 @@ input[name='btn_login'] {
     cursor: pointer;
 }
 
+input[type="checkbox"] {
+    display: inline;
+    width: unset;
+}
+
 #lost-pass {
     text-decoration: underline;
+}
+
+p.error {
+    text-align: left;
+    font-style: italic;
+    margin-top: -10px;
+    font-size: 13px;
+    color: red;
 }
