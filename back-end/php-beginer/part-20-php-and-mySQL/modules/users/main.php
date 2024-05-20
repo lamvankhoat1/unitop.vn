@@ -2,15 +2,19 @@
 
 <?php
   $sql = "SELECT * FROM tbl_users";
-  $result = mysqli_query($conn, $sql);
+  $result = db_query($sql);
   $list_users = array();
-  $num_rows  = mysqli_num_rows($result);
-  if (mysqli_num_rows($result) > 0) {
+  $num_rows  = db_num_rows($sql);
+  if (db_num_rows($sql) > 0) {
     while($row = mysqli_fetch_assoc($result)) {
         $list_users[] = $row;
     }
   };
 
+  foreach ($list_users as &$user) {
+    $user['url_update'] = "?mod=users&act=update&id={$user['user_id']}";
+    $user['url_delete'] = "?mod=users&act=delete&id={$user['user_id']}";
+  };
 ;
 ?>
 <style>
@@ -28,7 +32,13 @@
 
     table td,
     table th {
-        padding: 10px 15px
+        padding: 10px 15px;
+        border-left: 1px solid #ccc;
+    }
+
+    table td:first-child,
+    table th:first-child {
+        border-left: none;
     }
 </style>
 <div id="main">
@@ -37,23 +47,34 @@
     <table>
         <thead>
             <tr>
+                <th>STT</th>    
                 <th>User Id</th>
                 <th>Username</th>
                 <th>Họ và tên</th>
                 <th>Email</th>
                 <th>Giới tính</th>
+                <th colspan="2" style="text-align: center">Thao tác</th>
             </tr>
         </thead>
         <tbody>
             <?php
-              foreach ($list_users as $user) {  ?>
-                  <tr>
-                      <td><?php echo $user['user_id']; ?></td>
-                      <td><?php echo $user['username']; ?></td>
-                      <td><?php echo $user['fullname']; ?></td>
-                      <td><?php echo $user['email']; ?></td>
-                      <td><?php echo $user['gender']; ?></td>
-                  </tr>
+              for ($i=0; $i <= $num_rows; $i++) { 
+                  ?>
+                <?php
+                  if ($i < $num_rows) {
+                      ?>
+                    <tr>
+                        <td><?php echo ($i+1); ?></td>
+                        <td><?php echo $list_users[$i]['user_id']; ?></td>
+                        <td><?php echo $list_users[$i]['username']; ?></td>
+                        <td><?php echo $list_users[$i]['fullname']; ?></td>
+                        <td><?php echo $list_users[$i]['email']; ?></td>
+                        <td><?php echo $list_users[$i]['gender']; ?></td>
+                        <td><a href="<?php echo $list_users[$i]['url_update']; ?>">Edit</a></td>
+                        <td><a href="<?php echo $list_users[$i]['url_delete']; ?>">Delete</a></td>
+                    </tr>
+                  <?php  }
+                ?>
               <?php  }
             ?>
         </tbody>

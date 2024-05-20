@@ -1,0 +1,6 @@
+RewriteEngine On
+
+RewriteRule bai-viet\/([\w\-\+\?\=]+)(\d+).html ?mod=page&controller=index&id=$2 
+RewriteRule san-pham\/([\w\-\+\?\=]+)(\d+).html ?mod=product&controller=category&id=$2
+RewriteRule gio-hang.html ?mod=cart&controller=index
+RewriteRule thanh-toan.html ?mod=cart&controller=checkOut
