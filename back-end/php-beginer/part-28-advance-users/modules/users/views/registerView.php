@@ -1,20 +1,8 @@
 <?php
-  if (isset($_POST['btn_register'])) {
-    $_SESSION['form_error'] = array();
-    if (isset($_POST['btn_register'])) {
-      validation("fullname");
-      validation("email");
-      validation("username");
-      validation("password");
-      show_array($_SESSION['form_error']);
-      if(empty($_SESSION['form_error'])) {
-        if(!user_exist('username', 'email')) {
-          add_user('fullname', 'email', 'username', 'password');
-        }
-      }
-    }
+// test email
+// send_email('ktb.phanhoi@gmail.com', 'Phan Hoi', 'Email kích hoạt tài khoản', 'Xin chào <b>PhanHoi</b>');
 
-  }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,7 +33,7 @@
         <?php echo form_error('login'); ?>
         
         <input type="submit" value="ĐĂNG KÝ" name="btn_register">
-        <a href="?mod=users&controller=login" id="lost-pass">Đăng nhập</a>
+        <a href="?mod=users&action=login" id="lost-pass">Đăng nhập</a>
     </form>
 </body>
 </html>

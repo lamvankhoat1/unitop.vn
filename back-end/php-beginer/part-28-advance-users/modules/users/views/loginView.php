@@ -1,43 +1,3 @@
-<?php
-  # CHUẨN HOÁ DỮ LIỆU
-  $error = array();
-  if (isset($_POST['btn_login'])) {
-    # VALIDATION USERNAME
-    if (!empty($_POST['username'])) {
-      $username= $_POST['username'];
-      if (!is_username($username)) {
-        $error['username'] = 'Tên đăng nhập không đúng định dạng';
-      }
-    } else {
-        $error['username'] = 'Không được để trống tên đăng nhập';
-    }
-
-    # VALIDATION PASSWORD
-    if (!empty($_POST['password'])) {
-        $password= $_POST['password'];
-        if (!is_password($password)) {
-            $error['password'] = 'Mật khẩu không đúng định dạng';
-        }
-      } else {
-          $error['password'] = 'Không được để trống mật khẩu';
-      }
-
-    #LOGIN
-    if (empty($error)) {
-        if (check_login($username, $password)) {
-            session_start();
-            ob_start();
-            $_SESSION['is_login'] = true;
-            $_SESSION['user_login'] = $username;
-            if (isset($_POST['remember_me'])) {
-              setcookie("is_login", "true", time() + 3600, '/');
-              setcookie("user_login", $username, time() + 3600, '/');
-            }
-            redirect_to("?page=home");
-        };
-    }
-  }
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,7 +17,7 @@
         <?php echo form_error('login'); ?>
         <input type="checkbox" name="remember_me" value="remember_me"/> Ghi nhớ đăng nhập
         <input type="submit" value="Đăng nhập" name="btn_login">
-        <a href="#" id="lost-pass">Quên mật khẩu</a>
+        <a href="?mod=users&controller=reset&action=reset" id="lost-pass">Quên mật khẩu</a> | <a href="?mod=users&controller=register&action=register">Đăng ký</a>
     </form>
 </body>
 </html>

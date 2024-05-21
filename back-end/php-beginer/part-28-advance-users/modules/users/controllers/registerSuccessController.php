@@ -1,10 +1,10 @@
 <?php
   function construct() {
-    load("lib", "validation");
+    load_view("registerSuccess");
   };
 
   function indexAction() {
-    load_view("login");
+    
   };
   
   

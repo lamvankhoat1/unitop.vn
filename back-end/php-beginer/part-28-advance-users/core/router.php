@@ -13,4 +13,9 @@ $action_name = get_action().'Action';
 
 call_function(array('construct', $action_name));
 
+// LOGIN, LOGOUT
+if(!isset($_SESSION['form']['is_login']) && get_module() != 'users')   {
+    header("Location: ?mod=users&action=login");
+}
+
 

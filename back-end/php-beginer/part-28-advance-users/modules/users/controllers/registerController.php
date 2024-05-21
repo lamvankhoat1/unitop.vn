@@ -2,7 +2,10 @@
 # ?mod=users&controller=register
 
   function construct() {
+    load("lib", "email");
     load("lib", "validation");
+    load("helper", "url");
+    load_model("validation");
     load_model("register");
   };
 
@@ -10,80 +13,48 @@
     load_view("register");
   };
 
-  // ===============
-  // VALIDATION
-  // ===============
-  function set_error($field, $content) {
-    $_SESSION['form_error'][$field] = $content;
-  }
+  function registerAction() {
+    load_view("register");
+    if (isset($_POST['btn_register'])) {
+      $_SESSION['form_error'] = array();
+      validation("fullname");
+      validation("email");
+      validation("username");
+      validation("password");
+      show_array($_SESSION['form_error']);
+      if(empty($_SESSION['form_error'])) {
+        if(!user_exist('username', 'email')) {
+          $token = md5($_POST['password'].time());
+          add_user($token,'fullname', 'email', 'username', 'password');
+          send_email_to_verify($_POST['email'], $_POST['fullname'], $token);
+        }
+      }
+    }
+  };
+  
+  
 
-  function remove_error($field) {
-    unset($_SESSION['form_error'][$field]);
-  }
-
-  function is_empty($field) {
-    if (empty($_POST[$field])) {
-        set_error($field, "Không được để trống trường này");
-        return true;
+  function verifyAction() {
+    $token = $_GET['token'];
+    if (check_token($token) == 1) {
+        // KÍCH HOẠT TÀI KHOẢN
+        db_update('tbl_users', array(
+          'is_active' => 1
+        ), "token = '{$token}'");
+        redirect_to("?mod=users&controller=registerSuccess");
     } else {
-        remove_error($field);
-        return false;
+      echo "Kích hoạt tài khoản không thành công";
     }
-  }
+  };
 
-  function validation($field) {
-    $function_name = "validation_".$field;
-    if (function_exists($function_name)) {
-        $function_name();
-    }
-  }
-
-  function validation_fullname() {
-    $field = 'fullname';
-    $fullname = $_POST[$field];
-    if (!is_empty($field)) {
-        if (strlen($fullname) <= 1) {
-            set_error($field, 'Độ dài tên phải trên 1 ký tự');
-        } else {
-            remove_error($field);
-        }
-    };
-  }
-
-  function validation_email() {
-    $field = 'email';
-    $email = $_POST[$field];
-    if (!is_empty($field)) {
-        if(!is_email($email)){
-            set_error($field, "Email bạn nhập không đúng định dạng");
-        } else {
-            remove_error($field);
-        }
-    }
-  }
-
-  function validation_username() {
-    $field = 'username';
-    $username = $_POST[$field];
-    if (!is_empty($field)) {
-        if(!is_username($username)){
-            set_error($field, "username bạn nhập không đúng định dạng");
-        } else {
-            remove_error($field);
-        }
-    }
-  }
-
-  function validation_password() {
-    $field = 'password';
-    $password = $_POST[$field];
-    if (!is_empty($field)) {
-        if(!is_password($password)){
-            set_error($field, "password bạn nhập không đúng định dạng");
-        } else {
-            remove_error($field);
-        }
-    }
+  // ===============
+  // SEND EMAIL
+  // ===============
+  function send_email_to_verify($email, $fullname, $token) {
+    $subject = "Kích hoạt tài khoản trên UNITOP.VN";
+    $content = "Xin chào <b>{$fullname}</b>!<br>Vui lòng nhấn vào link này để xác thực tài khoản trên UNITOP:<br>"
+    ."http://localhost/unitop.vn/back-end/php-beginer/part-28-advance-users/?mod=users&controller=register&action=verify&token={$token}\"";
+    send_email($email, $fullname, $subject, $content);
   }
 
 

@@ -14,18 +14,18 @@
  * smtp_user: Tên đăng nhập tài khoản gửi mail
  * smtp_pass: Password tài khoản gửi mail
  * smtp_port: Cổng
- * mailtype: Định dạng nội dung mail
+ * mailtype: Định dạng nội dung mail: true là html, false là text
  * charset: Mã ký tự nội dung mail(UTF-8)
  */
 
 $email = Array(
     'protocol' => 'smtp',
-    'smtp_host' => 'ssl://smtp.googlemail.com',
-    'smtp_port' => 465,
-    'smtp_user' => '',
-    'smtp_pass' => '',
+    'smtp_host' => 'smtp.gmail.com',
+    'smtp_port' => 587,
+    'smtp_user' => 'lamvankhoat1',
+    'smtp_pass' => 'qkhi wfmi mhpx lncn',
     'smtp_timeout' => '7',
-    'mailtype' => 'html',
+    'mailtype' => true,
     'charset' => 'UTF-8'
 );
 
