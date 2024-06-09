@@ -1,6 +1,6 @@
 <?php
 
-  function get_list_posts() {
+  function get_list_posts() { 
     global $tbl_list_posts;
     if (isset($_GET['filter'])) {
       return get_list_posts_by_status($_GET['filter']);

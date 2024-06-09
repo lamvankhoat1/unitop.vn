@@ -25,8 +25,39 @@
       $data = array(
         "list_pages" => get_list_pages()
       );
+      sm_actionClicked();
       load_view("list_page", $data);
     };
+
+        /** 
+     * Hành động trên trang danh sách bài viết
+     * ?actions=1: chỉnh sửa
+     * ?actions=2: bỏ vào thùng rác
+    */
+    function sm_actionClicked() {
+      if (isset($_GET['sm_action'])) {
+        echo "code run at line: ".__LINE__;
+        if (!empty($_GET['checked'])) {
+          $id_list = explode(";", $_GET['checked']);
+          switch ($_GET['actions']) {
+            // case 1: /** Chỉnh sửa*/
+            //   break;
+            case 2: /** Bỏ vào thùng rác*/
+              put_the_pages_in_the_trash($id_list);
+            break;
+            case 3: /** Áp dụng đang chờ*/
+              update_pages_to_pending($id_list);
+              break;  
+            case 4: /** Áp dụng đã đăng*/
+              update_pages_to_publish($id_list);
+              break; 
+            case 5: /** Xoá vĩnh viễn */
+              delete_pages_permanently($id_list);
+              break;                               
+          }
+        }
+      }
+    }
 
     
     /** 
@@ -109,7 +140,7 @@
     */
     function removeAction() {
       $id= $_GET['id'];
-      update_post_to_trash($id);
+      update_page_to_trash($id);
     };
     
     
