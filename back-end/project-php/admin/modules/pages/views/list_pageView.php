@@ -40,105 +40,38 @@
                                     <td><input type="checkbox" name="checkAll" id="checkAll"></td>
                                     <td><span class="thead-text">STT</span></td>
                                     <td><span class="thead-text">Tiêu đề</span></td>
-                                    <td><span class="thead-text">Danh mục</span></td>
                                     <td><span class="thead-text">Trạng thái</span></td>
                                     <td><span class="thead-text">Người tạo</span></td>
                                     <td><span class="thead-text">Thời gian</span></td>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td><input type="checkbox" name="checkItem" class="checkItem"></td>
-                                    <td><span class="tbody-text">1</h3></span>
-                                    <td class="clearfix">
-                                        <div class="tb-title fl-left">
-                                            <a href="" title="">Bacon ipsum dolor amet hamburger frankfurter cow biltong pork loin capicola</a>
-                                        </div>
-                                        <ul class="list-operation fl-right">
-                                            <li><a href="" title="Sửa" class="edit"><i class="fa fa-pencil" aria-hidden="true"></i></a></li>
-                                            <li><a href="" title="Xóa" class="delete"><i class="fa fa-trash" aria-hidden="true"></i></a></li>
-                                        </ul>
-                                    </td>
-                                    <td><span class="tbody-text">Danh mục 1</span></td>
-                                    <td><span class="tbody-text">Hoạt động</span></td>
-                                    <td><span class="tbody-text">Admin</span></td>
-                                    <td><span class="tbody-text">12-07-2016</span></td>
-                                </tr>
-                                <tr>
-                                    <td><input type="checkbox" name="checkItem" class="checkItem"></td>
-                                    <td><span class="tbody-text">2</h3></span>
-                                    <td class="clearfix">
-                                        <div class="tb-title fl-left">
-                                            <a href="" title="">Bacon ipsum dolor amet hamburger frankfurter cow biltong pork loin capicola</a>
-                                        </div>
-                                        <ul class="list-operation fl-right">
-                                            <li><a href="" title="Sửa" class="edit"><i class="fa fa-pencil" aria-hidden="true"></i></a></li>
-                                            <li><a href="" title="Xóa" class="delete"><i class="fa fa-trash" aria-hidden="true"></i></a></li>
-                                        </ul>
-                                    </td>
-                                    <td><span class="tbody-text">Danh mục 2</span></td>
-                                    <td><span class="tbody-text">Hoạt động</span></td>
-                                    <td><span class="tbody-text">Admin</span></td>
-                                    <td><span class="tbody-text">12-07-2016</span></td>
-                                </tr>
-                                <tr>
-                                    <td><input type="checkbox" name="checkItem" class="checkItem"></td>
-                                    <td><span class="tbody-text">3</h3></span>
-                                    <td class="clearfix">
-                                        <div class="tb-title fl-left">
-                                            <a href="" title="">Bacon ipsum dolor amet hamburger frankfurter cow biltong pork loin capicola</a>
-                                        </div>
-                                        <ul class="list-operation fl-right">
-                                            <li><a href="" title="Sửa" class="edit"><i class="fa fa-pencil" aria-hidden="true"></i></a></li>
-                                            <li><a href="" title="Xóa" class="delete"><i class="fa fa-trash" aria-hidden="true"></i></a></li>
-                                        </ul>
-                                    </td>
-                                    <td><span class="tbody-text">Danh mục 3</span></td>
-                                    <td><span class="tbody-text">Hoạt động</span></td>
-                                    <td><span class="tbody-text">Admin</span></td>
-                                    <td><span class="tbody-text">12-07-2016</span></td>
-                                </tr>
-                                <tr>
-                                    <td><input type="checkbox" name="checkItem" class="checkItem"></td>
-                                    <td><span class="tbody-text">4</h3></span>
-                                    <td class="clearfix">
-                                        <div class="tb-title fl-left">
-                                            <a href="" title="">Bacon ipsum dolor amet hamburger frankfurter cow biltong pork loin capicola</a>
-                                        </div>
-                                        <ul class="list-operation fl-right">
-                                            <li><a href="" title="Sửa" class="edit"><i class="fa fa-pencil" aria-hidden="true"></i></a></li>
-                                            <li><a href="" title="Xóa" class="delete"><i class="fa fa-trash" aria-hidden="true"></i></a></li>
-                                        </ul>
-                                    </td>
-                                    <td><span class="tbody-text">Danh mục 4</span></td>
-                                    <td><span class="tbody-text">Hoạt động</span></td>
-                                    <td><span class="tbody-text">Admin</span></td>
-                                    <td><span class="tbody-text">12-07-2016</span></td>
-                                </tr>
-                                <tr>
-                                    <td><input type="checkbox" name="checkItem" class="checkItem"></td>
-                                    <td><span class="tbody-text">5</h3></span>
-                                    <td class="clearfix">
-                                        <div class="tb-title fl-left">
-                                            <a href="" title="">Bacon ipsum dolor amet hamburger frankfurter cow biltong pork loin capicola</a>
-                                        </div>
-                                        <ul class="list-operation fl-right">
-                                            <li><a href="" title="Sửa" class="edit"><i class="fa fa-pencil" aria-hidden="true"></i></a></li>
-                                            <li><a href="" title="Xóa" class="delete"><i class="fa fa-trash" aria-hidden="true"></i></a></li>
-                                        </ul>
-                                    </td>
-                                    <td><span class="tbody-text">Danh mục 5</span></td>
-                                    <td><span class="tbody-text">Hoạt động</span></td>
-                                    <td><span class="tbody-text">Admin</span></td>
-                                    <td><span class="tbody-text">12-07-2016</span></td>
-                                </tr>
+                                <?php
+                                  foreach ($list_pages as $number => $page) {  ?>
+                                      <tr>
+                                          <td><input type="checkbox" name="checkItem" class="checkItem"></td>
+                                          <td><span class="tbody-text"><?php echo $number+1; ?></span>
+                                          <td class="clearfix">
+                                              <div class="tb-title fl-left">
+                                                  <a href="" title=""><?php echo $page['title']; ?></a>
+                                              </div>
+                                              <ul class="list-operation fl-right">
+                                                  <li><a href="?mod=pages&action=edit&id=<?php echo $page['id']; ?>" title="Sửa" class="edit"><i class="fa fa-pencil" aria-hidden="true"></i></a></li>
+                                                  <li><a href="?mod=pages&action=remove&id=<?php echo $page['id']; ?>" title="Cho vào thùng rác" class="delete"><i class="fa fa-trash" aria-hidden="true"></i></a></li>
+                                              </ul>
+                                          </td>
+                                          <td><span class="tbody-text"><?php echo $page['status']; ?></span></td>
+                                          <td><span class="tbody-text"><?php echo $page['author']; ?></span></td>
+                                          <td><span class="tbody-text"><?php echo $page['time_created']; ?></span></td>
+                                      </tr>
+                                  <?php  }
+                                ?>
                             </tbody>
                             <tfoot>
                                 <tr>
                                     <td><input type="checkbox" name="checkAll" id="checkAll"></td>
                                     <td><span class="tfoot-text">STT</span></td>
                                     <td><span class="tfoot-text">Tiêu đề</span></td>
-                                    <td><span class="tfoot-text">Danh mục</span></td>
                                     <td><span class="tfoot-text">Trạng thái</span></td>
                                     <td><span class="tfoot-text">Người tạo</span></td>
                                     <td><span class="tfoot-text">Thời gian</span></td>

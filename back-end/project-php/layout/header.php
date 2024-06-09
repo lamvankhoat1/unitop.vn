@@ -2,9 +2,9 @@
 <html>
     <head>
         <title>ISMART STORE</title>
-        <base href="http://localhost/unitop.vn/back-end/project-php/">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <base href="http://localhost/unitop.vn/back-end/project-php/">
         <link href="public/css/bootstrap/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
         <link href="public/css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link href="public/reset.css" rel="stylesheet" type="text/css"/>
@@ -36,7 +36,7 @@
                                         <a href="?page=category_product" title="">Sản phẩm</a>
                                     </li>
                                     <li>
-                                        <a href="blog" title="">Blog</a>
+                                        <a href="blog.html" title="">Blog</a>
                                     </li>
                                     <li>
                                         <a href="?page=detail_blog" title="">Giới thiệu</a>

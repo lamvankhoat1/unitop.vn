@@ -2,4 +2,4 @@ RewriteEngine On
 
 RewriteRule blog\/[a-z\-\d]+\-(\d+).html ?mod=blog&controller=detail&id=$1
 RewriteRule blog\/page-(\d+) \?mod=blog&num_posts=4&page=$1
-RewriteRule blog ?mod=blog&controller=index
+RewriteRule blog.html ?mod=blog&controller=index

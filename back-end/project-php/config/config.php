@@ -14,7 +14,7 @@
 $config['base_url'] = "http://localhost/unitop.vn/back-end/project-php/";
 
 
-$config['default_module'] = 'post';
+$config['default_module'] = 'blog';
 $config['default_controller'] = 'index';
 $config['default_action'] = 'index';
 

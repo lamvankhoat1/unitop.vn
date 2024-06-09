@@ -16,8 +16,10 @@
       }
 
       $data = array(
+        'page_position' => $page_position,
+        'num_posts_per_page' => $num_posts,
         'list_posts' => get_list_posts($page_position, $num_posts),
-        'num_posts' => get_num_posts()
+        'num_all_posts' => get_num_posts()
       );
       load_view("blog", $data);
     };
