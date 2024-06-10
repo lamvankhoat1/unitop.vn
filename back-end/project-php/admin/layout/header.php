@@ -46,16 +46,16 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="?page=list_product" title="">Sản phẩm</a>
+                                <a href="?mod=product" title="">Sản phẩm</a>
                                 <ul class="sub-menu">
                                     <li>
-                                        <a href="?page=add_product" title="">Thêm mới</a> 
+                                        <a href="?mod=product&action=add" title="">Thêm mới</a> 
                                     </li>
                                     <li>
-                                        <a href="?page=list_product" title="">Danh sách sản phẩm</a> 
+                                        <a href="?mod=product" title="">Danh sách sản phẩm</a> 
                                     </li>
                                     <li>
-                                        <a href="?page=list_cat" title="">Danh mục sản phẩm</a> 
+                                        <a href="?mod=product&controller=list_cat" title="">Danh mục sản phẩm</a> 
                                     </li>
                                 </ul>
                             </li>

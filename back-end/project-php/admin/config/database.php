@@ -24,5 +24,6 @@ $db = array(
 
 $tbl_list_posts = "tbl_list_posts";
 $tbl_list_pages = "tbl_list_pages";
+$tbl_list_cats = "tbl_list_cats";
 
 
