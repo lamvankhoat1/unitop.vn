@@ -41,3 +41,17 @@ input[type="number"] {
     padding: 5px 10px;
 }
 
+.list-imgs {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.list-imgs img {
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 5px;
+}
+

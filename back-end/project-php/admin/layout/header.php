@@ -49,10 +49,10 @@
                                 <a href="?mod=product" title="">Sản phẩm</a>
                                 <ul class="sub-menu">
                                     <li>
-                                        <a href="?mod=product&action=add" title="">Thêm mới</a> 
+                                        <a href="?mod=product" title="">Danh sách sản phẩm</a> 
                                     </li>
                                     <li>
-                                        <a href="?mod=product" title="">Danh sách sản phẩm</a> 
+                                        <a href="?mod=product&controller=list_companies" title="">Danh sách nhãn hàng</a> 
                                     </li>
                                     <li>
                                         <a href="?mod=product&controller=list_cat" title="">Danh mục sản phẩm</a> 
