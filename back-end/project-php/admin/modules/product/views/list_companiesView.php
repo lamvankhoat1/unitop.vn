@@ -18,6 +18,7 @@
                                     <td><input type="checkbox" name="checkAll" id="checkAll"></td>
                                     <td><span class="thead-text">STT</span></td>
                                     <td><span class="thead-text">Nhãn hàng</span></td>
+                                    <td><span class="thead-text">Số lượng</span></td>
                                     <td><span class="thead-text">Người tạo</span></td>
                                     <td><span class="thead-text">Thời gian</span></td>
                                 </tr>
@@ -26,16 +27,17 @@
                                 <?php foreach ($list_companies as $number => $comp) {  ?>
                                     <tr>
                                         <td><input type="checkbox" name="checkItem" class="checkItem"></td>
-                                        <td><span class="tbody-text"><?php echo $number+1; ?></h3></span>
+                                        <td><span class="tbody-text"><?php echo $number+1; ?></span>
                                         <td class="clearfix">
                                             <div class="tb-title fl-left">
-                                                <a href="" title=""><?php echo $comp['name']; ?></a>
+                                                <a href="?mod=<?php echo get_module() ?>&comp_id=<?php echo $comp['id']; ?>" title=""><?php echo $comp['name']; ?></a>
                                             </div> 
                                             <ul class="list-operation fl-right">
                                                 <li><a href="?mod=<?php echo get_module() ?>&controller=<?php echo get_controller(); ?>&action=edit&id=<?php echo $comp['id']; ?>" title="Sửa" class="edit"><i class="fa fa-pencil" aria-hidden="true"></i></a></li>
                                                 <li><a href="?mod=<?php echo get_module() ?>&controller=<?php echo get_controller(); ?>&action=delete&id=<?php echo $comp['id']; ?>" title="Xóa" class="delete"><i class="fa fa-trash" aria-hidden="true"></i></a></li>
                                             </ul>
                                         </td>
+                                        <td><span class="tbody-text"><?php echo count_products_by_comp_id($comp['id']) ?></span>
                                         <td><span class="tbody-text"><?php echo $comp['author']; ?></span></td>
                                         <td><span class="tbody-text"><?php echo $comp['time_created']; ?></span></td>
                                     </tr>

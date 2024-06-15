@@ -8,7 +8,7 @@
                     <h3 id="index" class="fl-left">XÁC NHẬN XOÁ DANH MỤC</h3>
                 </div>
             </div>
-            <div class="section" id="detail-page">
+            <div class="section" id="detail-page" style='text-align: center'>
                 <div class="section-detail">
                     <form method="POST">
                         <label for="">Bạn có chắc muốn xoá danh mục <span style="color: red"><?php echo $cat['name']; ?></span>? </label>

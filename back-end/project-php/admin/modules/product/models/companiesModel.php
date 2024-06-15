@@ -30,4 +30,9 @@
     db_delete($tbl_list_companies, $where);
     redirect_to("?mod=".get_module()."&controller=".get_controller());
   }
+
+  function count_products_by_comp_id($id) {
+    $query_string = "SELECT COUNT(id)as count_products FROM tbl_list_products WHERE company_id = {$id}";
+    return db_fetch_row($query_string)['count_products'];
+  }
 ?>

@@ -33,7 +33,7 @@
                                         <a href="?page=home" title="">Trang chủ</a>
                                     </li>
                                     <li>
-                                        <a href="?page=category_product" title="">Sản phẩm</a>
+                                        <a href="?mod=product&cat_id=1" title="">Sản phẩm</a>
                                     </li>
                                     <li>
                                         <a href="blog.html" title="">Blog</a>

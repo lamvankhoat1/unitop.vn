@@ -55,3 +55,9 @@ input[type="number"] {
     padding: 5px;
 }
 
+.long-content {
+    height: 160px;
+    max-width: 100px;
+    overflow: scroll;
+}
+

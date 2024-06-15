@@ -40,126 +40,83 @@
                                 <tr>
                                     <td><input type="checkbox" name="checkAll" id="checkAll"></td>
                                     <td><span class="thead-text">STT</span></td>
-                                    <td><span class="thead-text">Mã sản phẩm</span></td>
-                                    <td><span class="thead-text">Hình ảnh</span></td>
                                     <td><span class="thead-text">Tên sản phẩm</span></td>
-                                    <td><span class="thead-text">Giá</span></td>
-                                    <td><span class="thead-text">Danh mục</span></td>
-                                    <td><span class="thead-text">Trạng thái</span></td>
+                                    <td><span class="thead-text">Giá cũ</span></td>
+                                    <td><span class="thead-text">Giá mới</span></td>
+                                    <td><span class="thead-text">Mô tả ngắn</span></td>
+                                    <td><span class="thead-text">Chi tiết</span></td>
+                                    <td><span class="thead-text">Ảnh đại diện</span></td>
+                                    <td><span class="thead-text">Danh sách ảnh mô tả</span></td>
+                                    <td><span class="thead-text">Số lượng</span></td>
+                                    <td><span class="thead-text">Mã hãng</span></td>
+                                    <td><span class="thead-text">Mã danh mục</span></td>
                                     <td><span class="thead-text">Người tạo</span></td>
-                                    <td><span class="thead-text">Thời gian</span></td>
+                                    <td><span class="thead-text">Thời gian tạo</span></td>
+
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td><input type="checkbox" name="checkItem" class="checkItem"></td>
-                                    <td><span class="tbody-text">1</h3></span>
-                                    <td><span class="tbody-text">WEB00001</h3></span>
-                                    <td>
-                                        <div class="tbody-thumb">
-                                            <img src="public/images/img-product.png" alt="">
-                                        </div>
-                                    </td>
-                                    <td class="clearfix">
-                                        <div class="tb-title fl-left">
-                                            <a href="" title="">Quần Âu nam vải trơn</a>
-                                        </div>
-                                        <ul class="list-operation fl-right">
+                                <?php
+                                  foreach ($list_products as $number => $product) {  ?>
+                                    <tr>
+                                        <td><input type="checkbox" name="checkItem" class="checkItem"></td>
+                                        <td><span class="tbody-text"><?php echo $number+1; ?></span></td>
+                                        <td class="clearfix">
+                                            <div class="tb-title fl-left">
+                                                <a href=""><?php echo $product['name']; ?></a>
+                                            </div>
+                                            <ul class="list-operation fl-right">
                                             <li><a href="" title="Sửa" class="edit"><i class="fa fa-pencil" aria-hidden="true"></i></a></li>
                                             <li><a href="" title="Xóa" class="delete"><i class="fa fa-trash" aria-hidden="true"></i></a></li>
                                         </ul>
-                                    </td>
-                                    <td><span class="tbody-text">250.000đ</span></td>
-                                    <td><span class="tbody-text">Thời trang nam</span></td>
-                                    <td><span class="tbody-text">Hoạt động</span></td>
-                                    <td><span class="tbody-text">Admin</span></td>
-                                    <td><span class="tbody-text">12-07-2016</span></td>
-                                </tr>
-                                <tr>
-                                    <td><input type="checkbox" name="checkItem" class="checkItem"></td>
-                                    <td><span class="tbody-text">1</h3></span>
-                                    <td><span class="tbody-text">WEB00001</h3></span>
-                                    <td>
-                                        <div class="tbody-thumb">
-                                            <img src="public/images/img-product.png" alt="">
-                                        </div>
-                                    </td>
-                                    <td class="clearfix">
-                                        <div class="tb-title fl-left">
-                                            <a href="" title="">Quần Âu nam vải trơn</a>
-                                        </div>
-                                        <ul class="list-operation fl-right">
-                                            <li><a href="" title="Sửa" class="edit"><i class="fa fa-pencil" aria-hidden="true"></i></a></li>
-                                            <li><a href="" title="Xóa" class="delete"><i class="fa fa-trash" aria-hidden="true"></i></a></li>
-                                        </ul>
-                                    </td>
-                                    <td><span class="tbody-text">250.000đ</span></td>
-                                    <td><span class="tbody-text">Thời trang nam</span></td>
-                                    <td><span class="tbody-text">Hoạt động</span></td>
-                                    <td><span class="tbody-text">Admin</span></td>
-                                    <td><span class="tbody-text">12-07-2016</span></td>
-                                </tr>
-                                <tr>
-                                    <td><input type="checkbox" name="checkItem" class="checkItem"></td>
-                                    <td><span class="tbody-text">1</h3></span>
-                                    <td><span class="tbody-text">WEB00001</h3></span>
-                                    <td>
-                                        <div class="tbody-thumb">
-                                            <img src="public/images/img-product.png" alt="">
-                                        </div>
-                                    </td>
-                                    <td class="clearfix">
-                                        <div class="tb-title fl-left">
-                                            <a href="" title="">Quần Âu nam vải trơn</a>
-                                        </div>
-                                        <ul class="list-operation fl-right">
-                                            <li><a href="" title="Sửa" class="edit"><i class="fa fa-pencil" aria-hidden="true"></i></a></li>
-                                            <li><a href="" title="Xóa" class="delete"><i class="fa fa-trash" aria-hidden="true"></i></a></li>
-                                        </ul>
-                                    </td>
-                                    <td><span class="tbody-text">250.000đ</span></td>
-                                    <td><span class="tbody-text">Thời trang nam</span></td>
-                                    <td><span class="tbody-text">Hoạt động</span></td>
-                                    <td><span class="tbody-text">Admin</span></td>
-                                    <td><span class="tbody-text">12-07-2016</span></td>
-                                </tr>
-                                <tr>
-                                    <td><input type="checkbox" name="checkItem" class="checkItem"></td>
-                                    <td><span class="tbody-text">1</h3></span>
-                                    <td><span class="tbody-text">WEB00001</h3></span>
-                                    <td>
-                                        <div class="tbody-thumb">
-                                            <img src="public/images/img-product.png" alt="">
-                                        </div>
-                                    </td>
-                                    <td class="clearfix">
-                                        <div class="tb-title fl-left">
-                                            <a href="" title="">Quần Âu nam vải trơn</a>
-                                        </div>
-                                        <ul class="list-operation fl-right">
-                                            <li><a href="" title="Sửa" class="edit"><i class="fa fa-pencil" aria-hidden="true"></i></a></li>
-                                            <li><a href="" title="Xóa" class="delete"><i class="fa fa-trash" aria-hidden="true"></i></a></li>
-                                        </ul>
-                                    </td>
-                                    <td><span class="tbody-text">250.000đ</span></td>
-                                    <td><span class="tbody-text">Thời trang nam</span></td>
-                                    <td><span class="tbody-text">Hoạt động</span></td>
-                                    <td><span class="tbody-text">Admin</span></td>
-                                    <td><span class="tbody-text">12-07-2016</span></td>
-                                </tr>
+                                        </td>
+                                        <td><span class="tbody-text"><?php echo $product['price']; ?></span></td>
+                                        <td><span class="tbody-text"><?php echo $product['new_price']; ?></span></td>
+                                        <td><span class="tbody-text">
+                                                <div class="long-content"><?php echo $product['short_desc']; ?>
+                                            </span></div>
+                                        </td>
+                                        <td><span class="tbody-text">
+                                            <div class="long-content"><?php echo $product['detail']; ?>
+                                            </span></div>
+                                        </td>
+                                        <td>
+                                            <div class="tbody-thumb">
+                                                <img src="<?php echo $product['thumb_main']; ?>" alt="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="tbody-thumb-list">
+                                                <div  class="long-content"><?php foreach (json_decode($product['list_thumbs'], 1) as $thumb) {  ?>
+                                                    <img src="<?php echo $thumb['path']; ?>">
+                                                <?php  } ?></div>
+                                            </div>    
+                                        </td>
+                                        <td><span class="tbody-text"><?php echo $product['qty']; ?></span></td>
+                                        <td><span class="tbody-text"><?php echo $product['company_id']; ?></span></td>
+                                        <td><span class="tbody-text"><?php echo $product['cat_id']; ?></span></td>
+                                        <td><span class="tbody-text"><?php echo $product['author']; ?></span></td>
+                                        <td><span class="tbody-text"><?php echo $product['time_created']; ?></span></td>
+                                    </tr>
+                                  <?php  }
+                                ?>
                             </tbody>
                             <tfoot>
                                 <tr>
                                     <td><input type="checkbox" name="checkAll" id="checkAll"></td>
                                     <td><span class="tfoot-text">STT</span></td>
-                                    <td><span class="tfoot-text">Mã sản phẩm</span></td>
-                                    <td><span class="tfoot-text">Hình ảnh</span></td>
-                                    <td><span class="tfoot-text">Tên sản phẩm</span></td>
-                                    <td><span class="tfoot-text">Giá</span></td>
-                                    <td><span class="tfoot-text">Danh mục</span></td>
-                                    <td><span class="tfoot-text">Trạng thái</span></td>
-                                    <td><span class="tfoot-text">Người tạo</span></td>
-                                    <td><span class="tfoot-text">Thời gian</span></td>
+                                    <td><span class="thead-text">Tên sản phẩm</span></td>
+                                    <td><span class="thead-text">Giá cũ</span></td>
+                                    <td><span class="thead-text">Giá mới</span></td>
+                                    <td><span class="thead-text">Mô tả ngắn</span></td>
+                                    <td><span class="thead-text">Chi tiết</span></td>
+                                    <td><span class="thead-text">Ảnh đại diện</span></td>
+                                    <td><span class="thead-text">Danh sách ảnh mô tả</span></td>
+                                    <td><span class="thead-text">Số lượng</span></td>
+                                    <td><span class="thead-text">Mã hãng</span></td>
+                                    <td><span class="thead-text">Mã danh mục</span></td>
+                                    <td><span class="thead-text">Người tạo</span></td>
+                                    <td><span class="thead-text">Thời gian tạo</span></td>
                                 </tr>
                             </tfoot>
                         </table>
@@ -191,4 +148,7 @@
         </div>
     </div>
 </div>
+<script>
+    
+</script>
 <?php get_footer() ?>
