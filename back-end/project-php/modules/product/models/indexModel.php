@@ -11,6 +11,12 @@
     return db_fetch_row($query_string)['name'];
   }
 
+  function get_product_by_id($id) {
+    global $tbl_list_products;
+    $query_string = 'SELECT *, REPLACE(thumb_main, "../", "") as thumb_main_client FROM `tbl_list_products` WHERE id = ' . $id;
+    return db_fetch_row($query_string);
+  }
+
   function get_products_by_cat_id($id) {
     global $tbl_list_products;
     $where = "WHERE";

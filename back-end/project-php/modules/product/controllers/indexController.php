@@ -5,7 +5,7 @@
     function construct() {
       load_model("index");
       load("lib", "data");
-      load("lib", "number");
+      load("lib", "image");
     };
   
     function indexAction() {
@@ -25,7 +25,10 @@
 
     function detailAction() {
       $id= $_GET['id'];
-      echo $id;
+      $data = array(
+        'product' => get_product_by_id($id),
+      );
+      load_view("detail_product", $data);
     };
     
     
