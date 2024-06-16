@@ -6,6 +6,7 @@
       load_model("index");
       load("lib", "data");
       load("lib", "image");
+      load("lib", "number");
     };
   
     function indexAction() {

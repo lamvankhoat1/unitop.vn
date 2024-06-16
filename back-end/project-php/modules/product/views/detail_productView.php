@@ -14,40 +14,52 @@
             </div>
         </div>
         <?php
-          foreach (json_decode($product['list_thumbs'], 1) as $thumb) {
+          $data_image = json_decode($product['list_thumbs'], 1);
+          foreach ($data_image as $key => $thumb) {
             $path = str_replace("../", "", $thumb['path']);
-            list($width, $height, $type) = getimagesize($path);
-            $old_image = load_image($path, $type);
-            $image_scaled = scale_image(1, $old_image, 350, 350, $path);
+            resize_image(350, 350, $path);
+            resize_image(700, 700, $path);
+            resize_image(50, 50, $path);
+
+            $dir = pathinfo($path, PATHINFO_DIRNAME)."/resize";
+            $type = pathinfo($path, PATHINFO_EXTENSION );
+            
+            $base_name_700_700 = pathinfo($path, PATHINFO_FILENAME)."-700x700";
+            $base_name_350_350 = pathinfo($path, PATHINFO_FILENAME)."-350x350";
+            $base_name_50_50 = pathinfo($path, PATHINFO_FILENAME)."-50x50";
+            
+            
+            $new_path_700_700 = $dir."/".$base_name_700_700.".".$type;
+            $new_path_350_350 = $dir."/".$base_name_350_350.".".$type;
+            $new_path_50_50 = $dir."/".$base_name_50_50.".".$type;
+            
+            $data_image[$key]['path'] = $path;
+            $data_image[$key]['350_350'] = $new_path_350_350;
+            $data_image[$key]['700_700'] = $new_path_700_700;
+            $data_image[$key]['50_50'] = $new_path_50_50;
+            
           }
+
+          ;
+          resize_image(350, 350, $product['thumb_main_client']);
+          $product['thumb_main_client_350_350'] = pathinfo($path, PATHINFO_DIRNAME)."/resize/".pathinfo($path, PATHINFO_FILENAME)."-350x350".".".$type;
+          echo $product['thumb_main_client_350_350'];
         ?>
+
+    
         <div class="main-content fl-right">
             <div class="section" id="detail-product-wp">
                 <div class="section-detail clearfix">
                     <div class="thumb-wp fl-left">
                         <a href="" title="" id="main-thumb">
-                            <img id="zoom" src="https://media3.scdn.vn/img2/2017/10_30/sxlpFs_simg_ab1f47_350x350_maxb.jpg" data-zoom-image="<?php echo $product['thumb_main_client']; ?>"/>
+                            <img id="zoom" src="<?php echo $product['thumb_main_client_350_350']; ?>" data-zoom-image="<?php echo $product['thumb_main_client']; ?>"/>
                         </a>
                         <div id="list-thumb">
-
-                            <a href="" data-image="https://media3.scdn.vn/img2/2017/10_30/sxlpFs_simg_ab1f47_350x350_maxb.jpg" data-zoom-image="<?php echo $product['thumb_main_client']; ?>">
-                                <img id="zoom" src="https://media3.scdn.vn/img2/2017/10_30/sxlpFs_simg_02d57e_50x50_maxb.jpg" />
-                            </a>
-                            <a href="" data-image="https://media3.scdn.vn/img2/2017/10_30/BlccRg_simg_ab1f47_350x350_maxb.jpg" data-zoom-image="<?php echo $product['thumb_main_client']; ?>">
-                                <img id="zoom" src="https://media3.scdn.vn/img2/2017/10_30/BlccRg_simg_02d57e_50x50_maxb.jpg" />
-                            </a>
-                            <a href="" data-image="https://media3.scdn.vn/img2/2017/10_30/sxlpFs_simg_ab1f47_350x350_maxb.jpg" data-zoom-image="<?php echo $product['thumb_main_client']; ?>">
-                                <img id="zoom" src="https://media3.scdn.vn/img2/2017/10_30/sxlpFs_simg_02d57e_50x50_maxb.jpg" />
-                            </a>
-                            <a href="" data-image="https://media3.scdn.vn/img2/2017/10_30/BlccRg_simg_ab1f47_350x350_maxb.jpg" data-zoom-image="<?php echo $product['thumb_main_client']; ?>">
-                                <img id="zoom" src="https://media3.scdn.vn/img2/2017/10_30/BlccRg_simg_02d57e_50x50_maxb.jpg" />
-                            </a>
-                            <a href="" data-image="https://media3.scdn.vn/img2/2017/10_30/sxlpFs_simg_ab1f47_350x350_maxb.jpg" data-zoom-image="<?php echo $product['thumb_main_client']; ?>">
-                                <img id="zoom" src="https://media3.scdn.vn/img2/2017/10_30/sxlpFs_simg_02d57e_50x50_maxb.jpg" />
-                            </a>
-                            <a href="" data-image="https://media3.scdn.vn/img2/2017/10_30/BlccRg_simg_ab1f47_350x350_maxb.jpg" data-zoom-image="<?php echo $product['thumb_main_client']; ?>">
-                                <img id="zoom" src="https://media3.scdn.vn/img2/2017/10_30/BlccRg_simg_02d57e_50x50_maxb.jpg" />
-                            </a>
+                            <?php foreach ($data_image as $thumb) {  ?>
+                                <a href="" data-image="<?php echo $thumb['350_350']; ?>" data-zoom-image="<?php echo $thumb['700_700']; ?>">
+                                    <img id="zoom" src="<?php echo $thumb['50_50']; ?>" />
+                                </a>
+                            <?php  } ?>
                         </div>
                     </div>
                     <div class="thumb-respon-wp fl-left">

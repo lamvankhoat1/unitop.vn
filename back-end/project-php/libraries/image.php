@@ -29,25 +29,21 @@
     return $image;
 }
 
-function scale_image($scale, $image, $width, $height, $path) {
-    $new_width = $width * $scale;
-    $new_height = $height * $scale;
-    return resize_image($new_width, $new_height, $image, $width, $height, $path);
-
-}
-function resize_image($new_width, $new_height, $image, $width, $height, $path) {
-    $dir = pathinfo($path, PATHINFO_DIRNAME);
-    $base_name = pathinfo($path, PATHINFO_BASENAME)."-{$width}x{$height}";
+function resize_image($new_width, $new_height, $path) {
+    $dir = pathinfo($path, PATHINFO_DIRNAME)."/resize";
+    $base_name = pathinfo($path, PATHINFO_FILENAME)."-{$new_width}x{$new_height}";
     $type = pathinfo($path, PATHINFO_EXTENSION );
-    
-    $new_path = $dir.$base_name.".".$type;
-    $new_imag = imagecreatetruecolor($new_width, $new_height);
-    imagecopyresized($new_imag, $image, 0, 0, 0, 0, $new_width, $new_height, $width, $height);
-    return imagejpeg($new_imag, $new_path);
-}
+    $new_path = $dir."/".$base_name.".".$type;
 
-// $filename = "panda.jpeg";
-// list($width, $height, $type) = getimagesize($filename);
-// $old_image = load_image($filename, $type);
-// $image_scaled = scale_image(0.8, $old_image, $width, $height);
+    list($width, $height, $file_type) = getimagesize($path);
+    
+    $new_imag = imagecreatetruecolor($new_width, $new_height);
+    $source = load_image($path, $file_type);
+
+    imagecopyresized($new_imag, $source, 0, 0, 0, 0, $new_width, $new_height, $width, $height);
+    imagedestroy($new_imag);
+    imagedestroy($source);
+    // output
+    return imagewebp($new_imag, $new_path);
+}
 ?>
