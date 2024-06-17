@@ -75,7 +75,6 @@
 </div>
 
 <?php $cat_id = (isset($_GET['cat_id'])) ? $_GET['cat_id'] : false; ?>
-
 <script>
 
     $(document).ready(function(){
@@ -88,7 +87,9 @@
         max_price = $priceElm.data("maxPrice");
         company_id = $brandElm.data("brand");
         
-        cat_id =  $catElm.data("cat");
+        let url = location.href;
+        let cat_id_url = new URL(url);
+        cat_id =  ($catElm.data("cat")) ? $catElm.data("cat") : cat_id_url.searchParams.get('cat_id');
 
 
         filterPoductsByAjax(min_price, max_price, company_id, cat_id);

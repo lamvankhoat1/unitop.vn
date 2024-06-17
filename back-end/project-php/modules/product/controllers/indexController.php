@@ -47,7 +47,8 @@
         $where .= " AND company_id =  {$_POST['company_id']}";
       }
       if (isset($_POST['cat_id'])) {
-        $where .= " AND `cat_id` IN ({$_POST['cat_id']})";
+        $list_ids = render_list_cats_id($_POST['cat_id']);
+        $where .= " AND `cat_id` IN ({$list_ids})";
       }
       
       $where = preg_replace('/WHERE\s+AND/', "WHERE ", $where);

@@ -45,24 +45,6 @@
                         <table>
                             <thead>
                                 <tr>
-                                    <td colspan="2">Hãng</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php
-                                  $list_companies = get_list_companies();
-                                ?>
-                                <?php foreach ($list_companies as $comp) {  ?>
-                                    <tr>
-                                        <td><input type="radio" name="r-brand" data-brand="<?php echo $comp['id']; ?>"></td>
-                                        <td><?php echo $comp['name']; ?></td>
-                                    </tr>
-                                <?php  } ?>
-                            </tbody>
-                        </table>
-                        <table>
-                            <thead>
-                                <tr>
                                     <td colspan="2">Loại</td>
                                 </tr>
                             </thead>
@@ -73,7 +55,7 @@
                                 <?php foreach ($list_cats as $cat) {  ?>
                                     <?php if($cat['cat_parent_id'] == 0) {  ?>
                                         <tr>
-                                            <td><input type="radio" name="r-cat" data-cat='<?php echo render_list_cats_id($cat['id']); ?>'></td>
+                                            <td><input type="radio" name="r-cat" data-cat='<?php echo $cat['id']; ?>'></td>
                                             <td><?php echo $cat['name']; ?></td>
                                         </tr>
                                     <?php  }?>
