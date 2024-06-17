@@ -4,7 +4,7 @@
                     <h3 class="section-title">Danh mục sản phẩm</h3>
                 </div>
                 <div class="secion-detail">
-                    <?php  echo render_menu_cats(); ?>
+                    <?php  echo render_menu_cats(); /** hàm trong lib/data */?>
                 </div>
             </div>
             <div class="section" id="banner-wp">

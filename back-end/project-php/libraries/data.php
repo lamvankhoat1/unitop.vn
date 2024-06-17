@@ -55,5 +55,31 @@
       $result .= "</ul>";
       return $result;
     }
+
+    function render_list_cats_id($cat_parent_id = 0) {
+      global $tbl_list_cats;
+      $query_string = "SELECT * FROM $tbl_list_cats";
+      $list_cats = db_fetch_array($query_string);
+      $result = get_list_cats_id($list_cats, $cat_parent_id);
+      $result[] = $cat_parent_id;
+      return join(",", $result);
+    } 
+
+    function get_list_cats_id($list_cats, $cat_parent_id = 0) {
+      $result = [];
+      
+      foreach ($list_cats as $cat) {
+        if($cat['cat_parent_id'] == $cat_parent_id) {
+            $result[] = $cat['id'];
+            if(has_child($list_cats, $cat)) {
+                $item = get_list_cats_id($list_cats, $cat['id']);
+                $result =  array_merge($result, $item);
+            }
+        }
+      }
+      return $result;
+    }
+
+    
       
 ?>

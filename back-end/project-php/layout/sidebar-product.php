@@ -21,23 +21,23 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><input type="radio" name="r-price"></td>
+                                    <td><input type="radio" name="r-price" data-min-price='0' data-max-price='499999'></td>
                                     <td>Dưới 500.000đ</td>
                                 </tr>
                                 <tr>
-                                    <td><input type="radio" name="r-price"></td>
+                                    <td><input type="radio" name="r-price" data-min-price='500000' data-max-price='1000000'></td>
                                     <td>500.000đ - 1.000.000đ</td>
                                 </tr>
                                 <tr>
-                                    <td><input type="radio" name="r-price"></td>
+                                    <td><input type="radio" name="r-price" data-min-price='1000000' data-max-price='5000000'></td>
                                     <td>1.000.000đ - 5.000.000đ</td>
                                 </tr>
                                 <tr>
-                                    <td><input type="radio" name="r-price"></td>
+                                    <td><input type="radio" name="r-price" data-min-price='5000000' data-max-price='10000000'></td>
                                     <td>5.000.000đ - 10.000.000đ</td>
                                 </tr>
                                 <tr>
-                                    <td><input type="radio" name="r-price"></td>
+                                    <td><input type="radio" name="r-price" data-min-price='10000000'></td>
                                     <td>Trên 10.000.000đ</td>
                                 </tr>
                             </tbody>
@@ -49,30 +49,15 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td><input type="radio" name="r-brand"></td>
-                                    <td>Acer</td>
-                                </tr>
-                                <tr>
-                                    <td><input type="radio" name="r-brand"></td>
-                                    <td>Apple</td>
-                                </tr>
-                                <tr>
-                                    <td><input type="radio" name="r-brand"></td>
-                                    <td>Hp</td>
-                                </tr>
-                                <tr>
-                                    <td><input type="radio" name="r-brand"></td>
-                                    <td>Lenovo</td>
-                                </tr>
-                                <tr>
-                                    <td><input type="radio" name="r-brand"></td>
-                                    <td>Samsung</td>
-                                </tr>
-                                <tr>
-                                    <td><input type="radio" name="r-brand"></td>
-                                    <td>Toshiba</td>
-                                </tr>
+                                <?php
+                                  $list_companies = get_list_companies();
+                                ?>
+                                <?php foreach ($list_companies as $comp) {  ?>
+                                    <tr>
+                                        <td><input type="radio" name="r-brand" data-brand="<?php echo $comp['id']; ?>"></td>
+                                        <td><?php echo $comp['name']; ?></td>
+                                    </tr>
+                                <?php  } ?>
                             </tbody>
                         </table>
                         <table>
@@ -82,14 +67,17 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td><input type="radio" name="r-price"></td>
-                                    <td>Điện thoại</td>
-                                </tr>
-                                <tr>
-                                    <td><input type="radio" name="r-price"></td>
-                                    <td>Laptop</td>
-                                </tr>
+                                <?php
+                                  $list_cats = get_list_cats();
+                                ?>
+                                <?php foreach ($list_cats as $cat) {  ?>
+                                    <?php if($cat['cat_parent_id'] == 0) {  ?>
+                                        <tr>
+                                            <td><input type="radio" name="r-cat" data-cat='<?php echo render_list_cats_id($cat['id']); ?>'></td>
+                                            <td><?php echo $cat['name']; ?></td>
+                                        </tr>
+                                    <?php  }?>
+                                <?php  } ?>
                             </tbody>
                         </table>
                     </form>

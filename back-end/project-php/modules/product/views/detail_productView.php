@@ -8,7 +8,7 @@
                         <a href="" title="">Trang chủ</a>
                     </li>
                     <li>
-                        <a href="" title=""><?php echo get_name_cat_by_id($product['cat_id']); ?></a>
+                        <a href="http://localhost/unitop.vn/back-end/project-php/?mod=product&cat_id=<?php echo $product['cat_id']; ?>" title=""><?php echo get_name_cat_by_id($product['cat_id']); ?></a>
                     </li>
                 </ul>
             </div>
@@ -42,8 +42,9 @@
 
           ;
           resize_image(350, 350, $product['thumb_main_client']);
+          resize_image(700, 700, $product['thumb_main_client']);
           $product['thumb_main_client_350_350'] = pathinfo($path, PATHINFO_DIRNAME)."/resize/".pathinfo($path, PATHINFO_FILENAME)."-350x350".".".$type;
-          echo $product['thumb_main_client_350_350'];
+          $product['thumb_main_client_700_700'] = pathinfo($path, PATHINFO_DIRNAME)."/resize/".pathinfo($path, PATHINFO_FILENAME)."-700x700".".".$type;
         ?>
 
     
@@ -52,7 +53,7 @@
                 <div class="section-detail clearfix">
                     <div class="thumb-wp fl-left">
                         <a href="" title="" id="main-thumb">
-                            <img id="zoom" src="<?php echo $product['thumb_main_client_350_350']; ?>" data-zoom-image="<?php echo $product['thumb_main_client']; ?>"/>
+                            <img id="zoom" src="<?php echo $product['thumb_main_client_350_350']; ?>" data-zoom-image="<?php echo $product['thumb_main_client_700_700']; ?>"/>
                         </a>
                         <div id="list-thumb">
                             <?php foreach ($data_image as $thumb) {  ?>
@@ -66,19 +67,16 @@
                         <img src="<?php echo $product['thumb_main_client']; ?>" alt="">
                     </div>
                     <div class="info fl-right">
-                        <h3 class="product-name">Laptop HP Probook 440 G2 LED Backlit</h3>
+                        <h3 class="product-name"><?php echo $product['name']; ?></h3>
                         <div class="desc">
-                            <p>Bộ vi xử lý :Intel Core i505200U 2.2 GHz (3MB L3)</p>
-                            <p>Cache upto 2.7 GHz</p>
-                            <p>Bộ nhớ RAM :4 GB (DDR3 Bus 1600 MHz)</p>
-                            <p>Đồ họa :Intel HD Graphics</p>
-                            <p>Ổ đĩa cứng :500 GB (HDD)</p>
+                            <?php echo $product['short_desc']; ?>
                         </div>
                         <div class="num-product">
                             <span class="title">Sản phẩm: </span>
-                            <span class="status">Còn hàng</span>
+                            <?php $stock_status = ($product['qty'] > 0) ? "Còn hàng" : "Hết hàng" ?>
+                            <span class="status"><?php echo $stock_status; ?></span>
                         </div>
-                        <p class="price">14.700.000đ</p>
+                        <p class="price"><?php echo currency($product['price']); ?>đ</p>
                         <div id="num-order-wp">
                             <a title="" id="minus"><i class="fa fa-minus"></i></a>
                             <input type="text" name="num-order" value="1" id="num-order">
@@ -92,12 +90,7 @@
                 <div class="section-head">
                     <h3 class="section-title">Mô tả sản phẩm</h3>
                 </div>
-                <div class="section-detail">
-                    <p>Máy tính xách tay HP Probook 440 G2 là dòng máy tính xách tay thích hợp cho doanh nghiệp và những người làm văn phòng. Do đó, ngoài cấu hình tốt, thiết kế bền bỉ, máy tính xách tay HP Probook 440 G2 còn có khả năng bảo mật toàn diện giúp bạn luôn yên tâm về dữ liệu của mình.</p>
-                    <p>Máy tính xách tay HP Probook 440 G2 là dòng máy tính xách tay thích hợp cho doanh nghiệp và những người làm văn phòng. Do đó, ngoài cấu hình tốt, thiết kế bền bỉ, máy tính xách tay HP Probook 440 G2 còn có khả năng bảo mật toàn diện giúp bạn luôn yên tâm về dữ liệu của mình.</p>
-                    <p>Máy tính xách tay HP Probook 440 G2 là dòng máy tính xách tay thích hợp cho doanh nghiệp và những người làm văn phòng. Do đó, ngoài cấu hình tốt, thiết kế bền bỉ, máy tính xách tay HP Probook 440 G2 còn có khả năng bảo mật toàn diện giúp bạn luôn yên tâm về dữ liệu của mình.</p>
-                    <p>Máy tính xách tay HP Probook 440 G2 là dòng máy tính xách tay thích hợp cho doanh nghiệp và những người làm văn phòng. Do đó, ngoài cấu hình tốt, thiết kế bền bỉ, máy tính xách tay HP Probook 440 G2 còn có khả năng bảo mật toàn diện giúp bạn luôn yên tâm về dữ liệu của mình.</p>
-                </div>
+                <div class="section-detail"><?php echo $product['detail']; ?></div>
             </div>
             <div class="section" id="same-category-wp">
                 <div class="section-head">
@@ -105,172 +98,27 @@
                 </div>
                 <div class="section-detail">
                     <ul class="list-item">
-                        <li>
-                            <a href="" title="" class="thumb">
-                                <img src="public/images/img-pro-17.png">
-                            </a>
-                            <a href="" title="" class="product-name">Laptop HP Probook 4430s</a>
-                            <div class="price">
-                                <span class="new">17.900.000đ</span>
-                                <span class="old">20.900.000đ</span>
-                            </div>
-                            <div class="action clearfix">
-                                <a href="" title="" class="add-cart fl-left">Thêm giỏ hàng</a>
-                                <a href="" title="" class="buy-now fl-right">Mua ngay</a>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="" title="" class="thumb">
-                                <img src="public/images/img-pro-18.png">
-                            </a>
-                            <a href="" title="" class="product-name">Laptop HP Probook 4430s</a>
-                            <div class="price">
-                                <span class="new">17.900.000đ</span>
-                                <span class="old">20.900.000đ</span>
-                            </div>
-                            <div class="action clearfix">
-                                <a href="" title="" class="add-cart fl-left">Thêm giỏ hàng</a>
-                                <a href="" title="" class="buy-now fl-right">Mua ngay</a>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="" title="" class="thumb">
-                                <img src="public/images/img-pro-19.png">
-                            </a>
-                            <a href="" title="" class="product-name">Laptop HP Probook 4430s</a>
-                            <div class="price">
-                                <span class="new">17.900.000đ</span>
-                                <span class="old">20.900.000đ</span>
-                            </div>
-                            <div class="action clearfix">
-                                <a href="" title="" class="add-cart fl-left">Thêm giỏ hàng</a>
-                                <a href="" title="" class="buy-now fl-right">Mua ngay</a>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="" title="" class="thumb">
-                                <img src="public/images/img-pro-20.png">
-                            </a>
-                            <a href="" title="" class="product-name">Laptop HP Probook 4430s</a>
-                            <div class="price">
-                                <span class="new">17.900.000đ</span>
-                                <span class="old">20.900.000đ</span>
-                            </div>
-                            <div class="action clearfix">
-                                <a href="" title="" class="add-cart fl-left">Thêm giỏ hàng</a>
-                                <a href="" title="" class="buy-now fl-right">Mua ngay</a>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="" title="" class="thumb">
-                                <img src="public/images/img-pro-21.png">
-                            </a>
-                            <a href="" title="" class="product-name">Laptop HP Probook 4430s</a>
-                            <div class="price">
-                                <span class="new">17.900.000đ</span>
-                                <span class="old">20.900.000đ</span>
-                            </div>
-                            <div class="action clearfix">
-                                <a href="" title="" class="add-cart fl-left">Thêm giỏ hàng</a>
-                                <a href="" title="" class="buy-now fl-right">Mua ngay</a>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="" title="" class="thumb">
-                                <img src="public/images/img-pro-22.png">
-                            </a>
-                            <a href="" title="" class="product-name">Laptop HP Probook 4430s</a>
-                            <div class="price">
-                                <span class="new">17.900.000đ</span>
-                                <span class="old">20.900.000đ</span>
-                            </div>
-                            <div class="action clearfix">
-                                <a href="" title="" class="add-cart fl-left">Thêm giỏ hàng</a>
-                                <a href="" title="" class="buy-now fl-right">Mua ngay</a>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="" title="" class="thumb">
-                                <img src="public/images/img-pro-23.png">
-                            </a>
-                            <a href="" title="" class="product-name">Laptop HP Probook 4430s</a>
-                            <div class="price">
-                                <span class="new">17.900.000đ</span>
-                                <span class="old">20.900.000đ</span>
-                            </div>
-                            <div class="action clearfix">
-                                <a href="" title="" class="add-cart fl-left">Thêm giỏ hàng</a>
-                                <a href="" title="" class="buy-now fl-right">Mua ngay</a>
-                            </div>
-                        </li>
+                        <?php foreach ($products_same_cat as $product) {  ?>
+                            <li>
+                                <a href="?mod=product&action=detail&cat_id=<?php echo $product['cat_id']; ?>&id=<?php echo $product['id']; ?>" title="" class="thumb">
+                                    <img src="<?php echo $product['thumb_main']; ?>">
+                                </a>
+                                <a href="?mod=product&action=detail&cat_id=<?php echo $product['cat_id']; ?>&id=<?php echo $product['id']; ?>" title="" class="product-name" style="min-height: 35px"><?php echo $product['name']; ?></a>
+                                <div class="price">
+                                    <span class="new"><?php echo currency($product['price']); ?>đ</span>
+                                    <span class="old"><?php echo currency($product['new_price']); ?>đ</span>
+                                </div>
+                                <div class="action clearfix">
+                                    <a href="" title="" class="add-cart fl-left">Thêm giỏ hàng</a>
+                                    <a href="" title="" class="buy-now fl-right">Mua ngay</a>
+                                </div>
+                            </li>
+                        <?php  } ?>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="sidebar fl-left">
-            <div class="section" id="category-product-wp">
-                <div class="section-head">
-                    <h3 class="section-title">Danh mục sản phẩm</h3>
-                </div>
-                <div class="secion-detail">
-                    <ul class="list-item">
-                        <li>
-                            <a href="?page=category_product" title="">Điện thoại</a>
-                            <ul class="sub-menu">
-                                <li>
-                                    <a href="?page=category_product" title="">Iphone</a>
-                                </li>
-                                <li>
-                                    <a href="?page=category_product" title="">Samsung</a>
-                                    <ul class="sub-menu">
-                                        <li>
-                                            <a href="?page=category_product" title="">Iphone X</a>
-                                        </li>
-                                        <li>
-                                            <a href="?page=category_product" title="">Iphone 8</a>
-                                        </li>
-                                        <li>
-                                            <a href="?page=category_product" title="">Iphone 8 Plus</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="?page=category_product" title="">Oppo</a>
-                                </li>
-                                <li>
-                                    <a href="?page=category_product" title="">Bphone</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="?page=category_product" title="">Máy tính bảng</a>
-                        </li>
-                        <li>
-                            <a href="?page=category_product" title="">laptop</a>
-                        </li>
-                        <li>
-                            <a href="?page=category_product" title="">Tai nghe</a>
-                        </li>
-                        <li>
-                            <a href="?page=category_product" title="">Thời trang</a>
-                        </li>
-                        <li>
-                            <a href="?page=category_product" title="">Đồ gia dụng</a>
-                        </li>
-                        <li>
-                            <a href="?page=category_product" title="">Thiết bị văn phòng</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="section" id="banner-wp">
-                <div class="section-detail">
-                    <a href="" title="" class="thumb">
-                        <img src="public/images/banner.png" alt="">
-                    </a>
-                </div>
-            </div>
-        </div>
+        <?php get_sidebar("detail-product") ?>
     </div>
 </div>
 <?php get_footer() ?>
