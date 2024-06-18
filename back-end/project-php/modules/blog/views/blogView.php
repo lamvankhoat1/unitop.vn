@@ -38,7 +38,7 @@
             <div class="section" id="paging-wp">
                 <div class="section-detail">
                     <ul class="list-item clearfix">
-                        <?php pagination($num_all_posts, $page_position, $num_posts_per_page);?>
+                        <?php pagination($num_all_posts, $page_position, $num_posts_per_page, "blog/page-{{i}}");?>
                     </ul>
                 </div>
             </div>

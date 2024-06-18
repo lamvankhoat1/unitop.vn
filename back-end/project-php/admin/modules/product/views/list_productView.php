@@ -1,8 +1,7 @@
 <?php get_header() ?>
 <div id="main-content-wp" class="list-product-page">
     <div class="wrap clearfix">
-        <?php get_sidebar() ?>
-        <div id="content" class="fl-right">
+        <div id="content">
             <div class="section" id="title-page">
                 <div class="clearfix">
                     <h3 id="index" class="fl-left">Danh sách sản phẩm</h3>
@@ -57,10 +56,14 @@
                             </thead>
                             <tbody>
                                 <?php
+                                  $page = isset($_GET['page']) ? $_GET['page'] : 1;
+                                  $offset = 5*$page - 4;
+                                ?>
+                                <?php
                                   foreach ($list_products as $number => $product) {  ?>
                                     <tr>
                                         <td><input type="checkbox" name="checkItem" class="checkItem"></td>
-                                        <td><span class="tbody-text"><?php echo $number+1; ?></span></td>
+                                        <td><span class="tbody-text"><?php echo $number + $offset; ?></span></td>
                                         <td class="clearfix">
                                             <div class="tb-title fl-left">
                                                 <a href=""><?php echo $product['name']; ?></a>
@@ -127,21 +130,14 @@
                 <div class="section-detail clearfix">
                     <p id="desc" class="fl-left">Chọn vào checkbox để lựa chọn tất cả</p>
                     <ul id="list-paging" class="fl-right">
-                        <li>
-                            <a href="" title=""><</a>
-                        </li>
-                        <li>
-                            <a href="" title="">1</a>
-                        </li>
-                        <li>
-                            <a href="" title="">2</a>
-                        </li>
-                        <li>
-                            <a href="" title="">3</a>
-                        </li>
-                        <li>
-                            <a href="" title="">></a>
-                        </li>
+                        <?php
+                          if (isset($_GET['page'])) {
+                            $page_position = $_GET['page'];
+                          } else {
+                            $page_position = 1;
+                          }
+                        ?>
+                        <?php echo pagination(get_num_products(), $page_position, 5, "?mod=product&page={{i}}"); ?>
                     </ul>
                 </div>
             </div>

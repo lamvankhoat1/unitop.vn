@@ -60,6 +60,17 @@
                                 </ul>
                             </li>
                             <li>
+                                <a href="?mod=slider" title="">Slider</a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="?mod=slider" title="">Danh sách Slider</a> 
+                                    </li>
+                                    <li>
+                                        <a href="?mod=slider&action=add" title="">Thêm slider</a> 
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
                                 <a href="" title="">Bán hàng</a>
                                 <ul class="sub-menu">
                                     <li>

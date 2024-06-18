@@ -17,6 +17,7 @@
         load_model("product");
         load("helper", "url");
         load("lib", "data");
+        load("lib", "pagination");
         load("lib", "validation");
         load("lib", "preview_image");
     };

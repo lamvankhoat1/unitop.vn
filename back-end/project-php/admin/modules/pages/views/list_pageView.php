@@ -1,8 +1,7 @@
 <?php get_header() ?>
 <div id="main-content-wp" class="list-post-page">
     <div class="wrap clearfix">
-        <?php get_sidebar() ?>
-        <div id="content" class="fl-right">           
+        <div id="content">           
             <div class="section" id="title-page">
                 <div class="clearfix">
                     <h3 id="index" class="fl-left">Danh sách trang</h3>
