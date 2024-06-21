@@ -6,10 +6,16 @@
       load("lib", "data");
     };
   
-    /** 
-     * Xây dựng banner
-    */
+
     function indexAction() {
-      load_view("home");
+      load_model("slider");
+      load_model("product");
+      load("lib", "number");
+      $data = array(
+        'list_sliders' => get_list_sliders(),
+        'list_products_phone' => get_list_products(1),
+        'list_products_tablet' => get_list_products(3),
+      );
+      load_view("home", $data);
     };
 ?>

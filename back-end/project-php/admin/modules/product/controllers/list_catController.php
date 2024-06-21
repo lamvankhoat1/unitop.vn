@@ -29,7 +29,7 @@
       $error = array();
       $data = array();
       if (isset($_POST['btn-add-submit'])) {
-        if(is_not_empty("name")) {
+        if(is_not_empty("title")) {
             $data['name'] = get_value("title");
         } else {
             set_error_empty('title');

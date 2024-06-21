@@ -4,7 +4,7 @@
         <div id="content">
             <div class="section" id="title-page">
                 <div class="clearfix">
-                    <h3 id="index" class="fl-left">Thêm slider</h3>
+                    <h3 id="index" class="fl-left">Cập nhật slider</h3>
                 </div>
             </div>
             <div class="section" id="detail-page">
@@ -12,18 +12,18 @@
                     <form method="POST"  enctype='multipart/form-data'>
                         <label for="name">Tên slider</label>
                         <?php echo set_error_form("name"); ?>
-                        <input type="text" name="name" id="name" <?php set_value_input('name'); ?>>
+                        <input type="text" name="name" id="name" <?php set_value_input('name', $slider); ?>>
                         <label>Ảnh slider</label>
                         <?php echo set_error_form("slider"); ?>
                         <div class="uploadFile">
                             <input type="file" name="slider" style="margin-bottom: 10px">
-                            <img src="public/images/img-thumb.png" style="max-width: 100px">
+                            <img src="<?php echo $slider['slider']; ?>" style="max-width: 100px">
                         </div>
 
                         <label for="url">URL</label>
                         <?php echo set_error_form("url"); ?>
-                        <input type="url" name="url" id="url" min="0" <?php set_value_input('url'); ?>>
-                        <button type="submit" name="btn-add-submit" id="btn-submit">Thêm Slider</button>
+                        <input type="url" name="url" id="url" min="0" <?php set_value_input('url', $slider); ?>>
+                        <button type="submit" name="btn-update-submit" id="btn-submit">Cập nhật Slider</button>
                     </form>
                 </div>
             </div>

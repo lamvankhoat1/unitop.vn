@@ -18,6 +18,14 @@
     return true;
   }
 
+  // VALIDATION CHECK
+  function is_url($url) {
+    if (filter_var($url, FILTER_VALIDATE_URL)) {
+      return true;
+    }
+    return false;
+  }
+
   // VALIDATION FILE
   function is_not_empty_file($label) {
     if(isset($_FILES[$label]['size'])) {

@@ -27,5 +27,6 @@ $tbl_list_pages = 'tbl_list_pages';
 $tbl_list_products = 'tbl_list_products';
 $tbl_list_cats = 'tbl_list_cats';
 $tbl_list_companies = 'tbl_list_companies';
+$tbl_list_sliders = 'tbl_list_sliders';
 
 
