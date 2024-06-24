@@ -63,14 +63,19 @@
                                     <span class="phone">0987.654.321</span>
                                 </div>
                                 <div id="btn-respon" class="fl-right"><i class="fa fa-bars" aria-hidden="true"></i></div>
-                                <a href="?page=cart" title="giỏ hàng" id="cart-respon-wp" class="fl-right">
+                                <a href="?mod=cart" title="giỏ hàng" id="cart-respon-wp" class="fl-right">
                                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                    <span id="num">2</span>
+                                    <?php if(array_key_exists_multi_level("summary", $_SESSION)){
+                                        $num_qty = $_SESSION['cart']['summary']['qty'];
+                                    } else {
+                                        $num_qty = 0;
+                                    } ?>
+                                    <span id="num" class="num-cart"><?php echo $num_qty; ?></span>
                                 </a>
                                 <div id="cart-wp" class="fl-right">
                                     <div id="btn-cart">
                                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                        <span id="num">2</span>
+                                        <span id="num"  class="num-cart"><?php echo $num_qty; ?></span>
                                     </div>
                                     <div id="dropdown">
                                         <p class="desc">Có <span>2 sản phẩm</span> trong giỏ hàng</p>

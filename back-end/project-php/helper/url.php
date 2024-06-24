@@ -54,3 +54,9 @@ function create_slug($string)
     $string = strtolower($string);
     return $string;
 }
+
+function redirect_to($url) {
+  if (!empty($url)) {
+    header("Location: {$url}");
+  }
+}

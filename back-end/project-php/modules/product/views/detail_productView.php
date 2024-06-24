@@ -82,7 +82,7 @@
                             <input type="text" name="num-order" value="1" id="num-order">
                             <a title="" id="plus"><i class="fa fa-plus"></i></a>
                         </div>
-                        <a href="?page=cart" title="Thêm giỏ hàng" class="add-cart">Thêm giỏ hàng</a>
+                        <a href="?mod=cart&action=add&id=<?php echo $product['id']; ?>" title="Thêm giỏ hàng" class="add-cart">Thêm giỏ hàng</a>
                     </div>
                 </div>
             </div>
@@ -109,8 +109,8 @@
                                     <span class="old"><?php echo currency($product['new_price']); ?>đ</span>
                                 </div>
                                 <div class="action clearfix">
-                                    <a href="" title="" class="add-cart fl-left">Thêm giỏ hàng</a>
-                                    <a href="" title="" class="buy-now fl-right">Mua ngay</a>
+                                    <a href="?mod=cart&action=add&id=<?php echo $product['id']; ?>" title="" class="add-cart fl-left">Thêm giỏ hàng</a>
+                                    <a href="?mod=cart&action=buyNow&id=<?php echo $product['id']; ?>" title="" class="buy-now fl-right">Mua ngay</a>
                                 </div>
                             </li>
                         <?php  } ?>

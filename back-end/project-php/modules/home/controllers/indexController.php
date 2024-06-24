@@ -15,6 +15,7 @@
         'list_sliders' => get_list_sliders(),
         'list_products_phone' => get_list_products(1),
         'list_products_tablet' => get_list_products(3),
+        'list_feature_products' => get_list_feature_products(),
       );
       load_view("home", $data);
     };

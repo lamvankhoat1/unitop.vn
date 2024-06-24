@@ -46,8 +46,8 @@
                                     <span class="old"><?php echo currency($product['price']); ?></span>
                                 </div>
                                 <div class="action clearfix">
-                                    <a href="?page=cart" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
-                                    <a href="?page=checkout" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
+                                    <a href="?mod=cart&action=add&id=<?php echo $product['id']; ?>" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
+                                    <a href="?mod=cart&action=buyNow&id=<?php echo $product['id']; ?>" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
                                 </div>
                             </li>
                         <?php  } ?>
@@ -116,8 +116,11 @@
     }
 
     function render_list_products(result){
-        console.log(`result`, result);
         let list_wp = $("div#list-product-wp .section-detail .list-item.clearfix");
+        if (result.length == 0) {
+            list_wp.html("Không tìm thấy sản phẩm nào");
+            return "cancel";
+        }
         let list_item_template = `<li>
                                 <a href="?mod=product&action=detail&cat_id={{cat_id}}&id={{id}}" title="" class="thumb">
                                     <img src="{{thumb_main_client}}">
