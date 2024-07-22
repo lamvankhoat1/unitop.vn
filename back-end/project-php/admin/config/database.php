@@ -28,6 +28,8 @@ $tbl_list_cats = "tbl_list_cats";
 $tbl_list_companies = "tbl_list_companies";
 $tbl_list_products = "tbl_list_products";
 $tbl_list_sliders = "tbl_list_sliders";
+$tbl_list_orders = "tbl_list_orders";
+$tbl_list_menu = "tbl_list_menu";
 
 
 

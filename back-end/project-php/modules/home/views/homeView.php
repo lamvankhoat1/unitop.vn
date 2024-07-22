@@ -119,8 +119,8 @@
                                     <span class="old"><?php echo currency($product['price']); ?></span>
                                 </div>
                                 <div class="action clearfix">
-                                    <a href="?page=cart" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
-                                    <a href="?page=checkout" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
+                                    <a href="?mod=cart&action=add&id=<?php echo $product['id']; ?>" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
+                                    <a href="?mod=cart&action=buyNow&id=<?php echo $product['id']; ?>" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
                                 </div>
                             </li>
                         <?php  } ?>

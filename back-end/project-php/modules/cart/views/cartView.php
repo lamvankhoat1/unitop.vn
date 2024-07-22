@@ -1,6 +1,9 @@
 <?php get_header() ?>
 <?php
   $list_products = array();
+  $cart_info = array(
+    'total_price' => 0,
+  );
   if (array_key_exists_multi_level('buy',$_SESSION)) {
     $list_products = $_SESSION['cart']['buy'];
   }
@@ -8,6 +11,7 @@
   if (array_key_exists_multi_level('summary',$_SESSION)) {
     $cart_info = $_SESSION['cart']['summary'];
   }
+
   
 ?>
 <div id="main-content-wp" class="cart-page">
@@ -97,9 +101,10 @@
     $(document).ready(function(){
     //   Nếu số lượng được đặt về 0 khi load lại trang sẽ xoá sản phẩm đó đi
       $('[name="num-order"]').change(function(){
-        let qty = $(this).val();
+        let qty = Number($(this).val());
         let idProduct = $(this).data("id");
-        ajaxUpdateQty(idProduct, +qty);
+        console.log(idProduct, qty);
+        ajaxUpdateQty(idProduct, qty);
       })
     })
 

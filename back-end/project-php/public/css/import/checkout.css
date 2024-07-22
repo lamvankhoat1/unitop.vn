@@ -105,3 +105,11 @@
     font-weight: normal;
 }
 .checkout-page #fullname, .checkout-page #phone, .checkout-page #email, .checkout-page #desire{ margin-bottom: 0!important;}
+
+
+/* CUSTOM */
+span.form-error {
+    color: red;
+    font-style: italic;
+    float: right;
+}

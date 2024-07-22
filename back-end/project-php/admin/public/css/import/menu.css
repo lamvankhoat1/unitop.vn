@@ -1,6 +1,6 @@
 /*MENU*/
 .menu-page #list-menu{
-    width: 30%;
+    /* width: 30%; */
     background: #fff;
 }
 .menu-page #category-menu{ 
@@ -39,7 +39,7 @@
     padding: 5px 10px;
     border: 1px solid #ddd;
 }
-.menu-page .section-detail #btn-save-list{
+.menu-page .section-detail #btn-save-list, .menu-page .section-detail #btn-edit-list, .menu-page .section-detail #btn-cancel-list{
     display: block;
     border: none;
     outline: none;
@@ -47,6 +47,14 @@
     color: #fff;
     padding: 12px 20px;
     text-transform: uppercase;
+}
+.menu-page .section-detail #btn-edit-list, .menu-page .section-detail #btn-cancel-list {
+    padding: 6px 10px;
+    float: left;
+}
+.menu-page .section-detail #btn-cancel-list {
+    background-color: #c12e2a;
+    float: right;
 }
 .actions select{
     border-radius: 3px;

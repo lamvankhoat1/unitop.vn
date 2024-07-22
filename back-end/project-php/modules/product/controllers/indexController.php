@@ -38,10 +38,10 @@
       $list_products = array();
       $where = "WHERE ";
       if (isset($_POST['min_price'])) {
-        $where .= "price >= {$_POST['min_price']} ";
+        $where .= "new_price >= {$_POST['min_price']} ";
       }
       if (isset($_POST['max_price'])) {
-        $where .= " AND price <= {$_POST['max_price']} ";
+        $where .= " AND new_price <= {$_POST['max_price']} ";
       }
       if (isset($_POST['company_id'])) {
         $where .= " AND company_id =  {$_POST['company_id']}";
@@ -53,7 +53,9 @@
       
       $where = preg_replace('/WHERE\s+AND/', "WHERE ", $where);
       $list_products = array_merge($list_products, get_list_products_by_filter($where));
-
+      foreach ($list_products as $key => $product) {
+        $list_products[$key]['slug'] = create_slug($product['name']);
+      }
       echo json_encode($list_products);
       
     };

@@ -3,6 +3,7 @@
      * TREE DATA
     */
 
+    require 'slug.php';
     function tree_data($list_cats, $cat_parent_id = 0) {
         $result = array();
         foreach ($list_cats as $cat) {
@@ -44,7 +45,8 @@
       foreach ($list_cats as $cat) {
         if($cat['cat_parent_id'] == $cat_parent_id) {
             $result .= "<li>";
-            $result .= "<a href='?mod=product&cat_id={$cat['id']}' title=''>{$cat['name']}</a>";
+            // $result .= "<a href='?mod=product&cat_id={$cat['id']}' title=''>{$cat['name']}</a>";
+            $result .= "<a href='san-pham/".create_slug($cat['name'])."-{$cat['id']}.html' title=''>{$cat['name']}</a>";
             if(has_child($list_cats, $cat)) {
                 $sub_menu = create_menu($list_cats, $cat['id']);
                 $result .= $sub_menu;

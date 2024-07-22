@@ -1,3 +1,8 @@
+<?php
+    global $tbl_list_menu;
+    $query_string = "SELECT * FROM {$tbl_list_menu} order by order_item";
+    $list_menu = db_fetch_array($query_string);
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -29,21 +34,11 @@
                             <a href="" title="" id="payment-link" class="fl-left">Hình thức thanh toán</a>
                             <div id="main-menu-wp" class="fl-right">
                                 <ul id="main-menu" class="clearfix">
-                                    <li>
-                                        <a href="?page=home" title="">Trang chủ</a>
-                                    </li>
-                                    <li>
-                                        <a href="?mod=product&cat_id=1" title="">Sản phẩm</a>
-                                    </li>
-                                    <li>
-                                        <a href="blog.html" title="">Blog</a>
-                                    </li>
-                                    <li>
-                                        <a href="page/gioi-thieu-6.html" title="">Giới thiệu</a>
-                                    </li>
-                                    <li>
-                                        <a href="page/lien-he-1.html" title="">Liên hệ</a>
-                                    </li>
+                                    <?php foreach ($list_menu as $menu) {  ?>
+                                        <li>
+                                            <a href="<?php echo $menu['url_static']; ?>" title="<?php echo $menu['name']; ?>"><?php echo $menu['name']; ?></a>
+                                        </li>
+                                    <?php  } ?>
                                 </ul>
                             </div>
                         </div>

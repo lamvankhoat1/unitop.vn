@@ -37,10 +37,10 @@
                     <ul class="list-item clearfix">
                         <?php foreach ($list_products as $product) {  ?>
                             <li>
-                                <a href="?mod=product&action=detail&cat_id=<?php echo $product['cat_id']; ?>&id=<?php echo $product['id']; ?>" title="" class="thumb">
+                                <a href="san-pham/<?php echo create_slug($product['name']); ?>-<?php echo $product['cat_id']; ?>-<?php echo $product['id']; ?>.html" title="" class="thumb">
                                     <img src="<?php echo $product['thumb_client']; ?>">
                                 </a>
-                                <a style="min-height: 35px" href="?mod=product&action=detail&cat_id=<?php echo $product['cat_id']; ?>&id=<?php echo $product['id']; ?>" title="" class="product-name"><?php echo $product['name']; ?></a>
+                                <a style="min-height: 35px" href="san-pham/<?php echo create_slug($product['name']); ?>-<?php echo $product['cat_id']; ?>-<?php echo $product['id']; ?>.html" title="" class="product-name"><?php echo $product['name']; ?></a>
                                 <div class="price">
                                     <span class="new"><?php echo currency($product['new_price']); ?></span>
                                     <span class="old"><?php echo currency($product['price']); ?></span>
@@ -73,7 +73,6 @@
         <?php get_sidebar("product") ?>
     </div>
 </div>
-
 <?php $cat_id = (isset($_GET['cat_id'])) ? $_GET['cat_id'] : false; ?>
 <script>
 
@@ -88,8 +87,9 @@
         company_id = $brandElm.data("brand");
         
         let url = location.href;
-        let cat_id_url = new URL(url);
-        cat_id =  ($catElm.data("cat")) ? $catElm.data("cat") : cat_id_url.searchParams.get('cat_id');
+        // let cat_id_url = new URL(url);
+        // cat_id =  ($catElm.data("cat")) ? $catElm.data("cat") : cat_id_url.searchParams.get('cat_id');
+        cat_id = '<?php echo $_GET['cat_id']; ?>'
 
 
         filterPoductsByAjax(min_price, max_price, company_id, cat_id);
@@ -122,22 +122,23 @@
             return "cancel";
         }
         let list_item_template = `<li>
-                                <a href="?mod=product&action=detail&cat_id={{cat_id}}&id={{id}}" title="" class="thumb">
+                                <a href="san-pham/{{slug}}-{{cat_id}}-{{id}}.html" title="" class="thumb">
                                     <img src="{{thumb_main_client}}">
                                 </a>
-                                <a style="min-height: 35px" href="?mod=product&action=detail&cat_id={{cat_id}}&id={{id}}" title="" class="product-name">{{name}}</a>
+                                <a style="min-height: 35px" href="san-pham/{{slug}}-{{cat_id}}-{{id}}.html" title="" class="product-name">{{name}}</a>
                                 <div class="price">
                                     <span class="new">{{new_price}}</span>
                                     <span class="old">{{price}}</span>
                                 </div>
                                 <div class="action clearfix">
-                                    <a href="?page=cart" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
-                                    <a href="?page=checkout" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
+                                    <a href="?mod=cart&action=add&id={{id}}" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
+                                    <a href="?mod=cart&action=buyNow&id={{id}}" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
                                 </div>
                             </li>`
         list_wp.html("");
         result.forEach(function(product){
             let item = list_item_template;
+            item = item.replace(/{{slug}}/gm, product['slug']);
             item = item.replace(/{{cat_id}}/gm, product['cat_id']);
             item = item.replace(/{{id}}/gm, product['id']);
             item = item.replace(/{{name}}/gm, product['name']);

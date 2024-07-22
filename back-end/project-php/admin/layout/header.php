@@ -74,15 +74,15 @@
                                 <a href="" title="">Bán hàng</a>
                                 <ul class="sub-menu">
                                     <li>
-                                        <a href="?page=list_order" title="">Danh sách đơn hàng</a> 
+                                        <a href="?mod=cart" title="">Danh sách đơn hàng</a> 
                                     </li>
                                     <li>
-                                        <a href="?page=list_order" title="">Danh sách khách hàng</a> 
+                                        <a href="?mod=cart&action=detail" title="">Danh sách khách hàng</a> 
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="?page=menu" title="">Menu</a>
+                                <a href="?mod=menu" title="">Menu</a>
                             </li>
                         </ul>
                         <div id="dropdown-user" class="dropdown dropdown-extended fl-right">
