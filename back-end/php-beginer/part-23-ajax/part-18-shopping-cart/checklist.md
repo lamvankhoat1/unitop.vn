@@ -1,3 +1,0 @@
-- Đổ dữ liệu Giới thiệu & Liên hệ
-- Xây dựng database
-    - 
